@@ -8,11 +8,11 @@
 
 | Campo | Informação |
 |---|---|
-| Curso / Disciplina | `[preencher]` |
-| Projeto de Pesquisa / IC | `[preencher]` |
-| Orientador(a) | `[preencher]` |
+| Curso / Disciplina | `[Computabilidade e Complexidade de Algoritmos]` |
+| Projeto de Pesquisa / IC | `[Complexidade e Desempenho em Pipeline Híbrida para Detecção de Fraudes Financeiras]` |
+| Orientador(a) | `[Andrea Ono Sakai]` |
 | Data de entrega desta etapa | `[dd/mm/aaaa]` |
-| Integrantes do grupo | `[Nome 1, Nome 2, Nome 3...]` |
+| Integrantes do grupo | `[Guilherme Lombardi 1, Ryan dos Santos Veloso 2, Caio Winkler Marangoni 3, Guilherme Liborio Camargo 4, Julia Emily Leonardo Barbosa 5]` |
 | Tema (da etapa "a") | `[Análise comparativa de complexidade assintótica entre um pipeline tradicional de grafos (DFS/Kosaraju) e uma arquitetura híbrida com pré-filtragem por Autômatos Finitos, aplicada à detecção de fraudes bancárias em tempo real.]` |
 
 ---
@@ -33,9 +33,13 @@
 |---|---|---|
 | `[ex.: Segurança]` | `[proteção, vulnerabilidade]` | `[security, vulnerability]` |
 | `[ex.: IoT]` | `[Internet das Coisas]` | `[Internet of Things, smart devices]` |
-| `[ ]` | `[ ]` | `[ ]` |
+| `[Complexidade Assintótica ]` | `[Análise de algoritmos, Notação Big-O, Custo computacional, Limite assintótico, Escalonamento de desempenho ]` | `[Asymptotic complexity, Big-O notation, Computational cost, Algorithm scalability, Time-space complexity ]` |
+| `[Pré-filtragem por Autômatos Finitos ]` | `[Autômato Finito Determinístico (DFA), Processamento de Eventos Complexos (CEP), Filtro de entrada, Validação em tempo linear ]` | `[Deterministic Finite Automaton (DFA), Complex Event Processing (CEP), Stream filtering, Pattern matching automata, Edge filtering ]` |
+| `[Algoritmos de Travessia em Grafos ]` | `[Busca em Profundidade (DFS), Componentes Fortemente Conectados (Kosaraju), Detecção de ciclos, Centralidade de rede ]` | `[Depth-First Search (DFS), Kosaraju's algorithm, Strongly Connected Components (SCC), Graph traversal, Sub-graph detection ]` |
+| `[Processamento de Fluxos de Dados ]` | `[Processamento em tempo real, Processamento de streams, Análise contínua de dados, Baixa latência ]` | `[Stream processing, Data stream mining, Real-time event processing, Low-latency processing, In-memory streaming ]` |
+| `[Detecção de Fraudes Bancárias ]` | `[Detecção de anomalias financeiras, Transações suspeitas, Análise de risco em tempo real, Prevenção à fraude ]` | `[Financial fraud detection, Real-time anomaly detection, Credit card fraud detection, Transaction monitoring, Anti-fraud pipeline ]` |
 
-*Responsável por este passo: `[Nome do integrante]`*
+*Responsável por este passo: `[Guilherme Lombardi]`*
 
 ---
 
