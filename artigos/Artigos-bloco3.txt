@@ -1,0 +1,12 @@
+Primeiro (Real-Time Fraud Detection Using Machine Learning):
+https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4895921
+
+Segundo (An Efficient Real Time Model For Credit Card Fraud Detection Based On Deep Learning) :
+https://dl.acm.org/doi/abs/10.1145/3289402.3289530
+
+Terceiro (Dynamic quantification anti-fraud machine learning model for real-time transaction fraud detection in banking):
+https://link.springer.com/article/10.1007/s10791-025-09549-7
+
+Quarto (Leveraging Machine Learning for Real-Time Fraud Detection in Digital Payments):
+https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5076783
+
