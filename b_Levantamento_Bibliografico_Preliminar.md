@@ -13,7 +13,7 @@
 | Orientador(a) | `[preencher]` |
 | Data de entrega desta etapa | `[dd/mm/aaaa]` |
 | Integrantes do grupo | `[Nome 1, Nome 2, Nome 3...]` |
-| Tema (da etapa "a") | `[copiar o tema delimitado já validado]` |
+| Tema (da etapa "a") | `[Análise comparativa de complexidade assintótica entre um pipeline tradicional de grafos (DFS/Kosaraju) e uma arquitetura híbrida com pré-filtragem por Autômatos Finitos, aplicada à detecção de fraudes bancárias em tempo real.]` |
 
 ---
 
