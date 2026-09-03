@@ -2,7 +2,7 @@
 
 | Nome do Artigo | Nome da Base de Pesquisa | Link |
 |---|---|---|
-| `[preencher]` | `[preencher]` | `[preencher]` |
+| `[Graph Neural Networks for Financial Fraud Detection: A Review]` | `[Springer]` | `[https://link.springer.com/content/pdf/10.1007/s11704-024-40474-y.pdf]` |
 | `[preencher]` | `[preencher]` | `[preencher]` |
 | `[preencher]` | `[preencher]` | `[preencher]` |
 | `[preencher]` | `[preencher]` | `[preencher]` |
