@@ -47,11 +47,26 @@
 
 *Combine os termos do passo 1 com operadores booleanos (`AND`, `OR`, `NOT`). Use aspas para termos compostos e truncamento (`*`) quando a base permitir.*
 
-| Nº | String de busca | Base(s) em que será usada | Elaborada por |
-|---|---|---|---|
-| 1 | `[ex.: ("Internet of Things" OR "IoT") AND ("security" OR "vulnerability")]` | `[ ]` | `[Nome]` |
-| 2 | `[ ]` | `[ ]` | `[Nome]` |
-| 3 | `[ ]` | `[ ]` | `[Nome]` |
+*Coluna extra "Conceito-chave / eixo coberto" adicionada para rastrear cada string ate os conceitos do Passo 1.2, ate a pergunta de pesquisa do item 1.1 e ate os modulos do sistema atual (`cycle_detection.py`, `scc.py`, `centralidade.py`).*
+
+| No | String de busca | Conceito-chave / eixo coberto (Passo 1) | Base(s) em que sera usada | Elaborada por |
+|---|---|---|---|---|
+| 1 | `[("cycle enumeration" OR "simple cycles" OR "cycle detection") AND ("directed graph" OR "transaction graph" OR "transaction network") AND ("time complexity" OR "exponential" OR "pruning" OR "scalability")]` | `[Complexidade Assintotica — gargalo do modulo cycle_detection.py]` | `[ACM DL; IEEE Xplore; Springer Link]` | `[Caio Winkler Marangoni]` |
+| 2 | `[("cycle" OR "circular flow" OR "temporal cycle") AND ("money laundering" OR "layering" OR "smurfing" OR "anti-money laundering") AND ("graph" OR "network")]` | `[Deteccao de Fraudes Bancarias — layering, o padrao que o sistema procura]` | `[ACM DL; Springer Link; ScienceDirect]` | `[Caio Winkler Marangoni]` |
+| 3 | `[("strongly connected components" OR "Kosaraju" OR "Tarjan" OR "SCC") AND ("large-scale" OR "parallel" OR "distributed" OR "scalability") AND ("directed graph" OR "graph processing")]` | `[Algoritmos de Travessia em Grafos — custo do modulo scc.py em escala]` | `[IEEE Xplore; ACM DL; Springer Link]` | `[Caio Winkler Marangoni]` |
+| 4 | `[("finite automaton" OR "deterministic finite automaton" OR "DFA" OR "complex event processing") AND ("event stream" OR "stream processing") AND ("pattern matching" OR "filtering" OR "candidate reduction")]` | `[Pre-filtragem por Automatos Finitos — foco central da pesquisa]` | `[ACM DL; IEEE Xplore]` | `[Caio Winkler Marangoni]` |
+| 5 | `[("pre-filter*" OR "candidate reduction" OR "pruning" OR "filtering layer") AND ("graph search" OR "graph traversal" OR "subgraph matching") AND ("real-time" OR "streaming" OR "low latency")]` | `[Processamento de Fluxos de Dados — a hipotese: reduzir o volume antes da travessia]` | `[ACM DL; ScienceDirect; arXiv]` | `[Caio Winkler Marangoni]` |
+| 6 | `[("PaySim" OR "synthetic financial dataset" OR "mobile money simulator") AND ("fraud" OR "money laundering")]` | `[Base experimental — origem e limites do dataset usado no sistema]` | `[Springer Link; IEEE Xplore; arXiv]` | `[Caio Winkler Marangoni]` |
+| 7 | `[("automat*" OR "complex event processing") AND ("pre-filter*" OR "filtering layer") AND ("cycle detection" OR "strongly connected components" OR "graph traversal") AND ("fraud" OR "money laundering")]` | `[String-sintese: reproduz a pergunta de pesquisa do item 1.1 (pipeline hibrido)]` | `[ACM DL; Springer Link; arXiv]` | `[Caio Winkler Marangoni]` |
+
+**Observacoes sobre a construcao das strings**
+
+- As strings foram reescritas a partir do vocabulario do sistema que o grupo ja implementou, e nao do vocabulario generico de "fraude com machine learning". O sistema modela transacoes como multigrafo direcionado ponderado e procura **estrutura** (ciclos, componentes fortemente conectados, centralidade) — nao classifica transacao individual. Buscar por `"credit card fraud detection" AND "machine learning"` devolve outra literatura.
+- A **string 1** e a mais importante: o proprio README do sistema registra que "a enumeracao de todos os ciclos simples tem pior caso teorico exponencial em |V|". Esse expoente e o que a camada de pre-filtragem existe para atacar, e e o que a pergunta do item 1.1 pergunta.
+- As **strings 1 e 3** cobrem o baseline da comparacao (DFS/Kosaraju ja implementados); as **strings 4 e 5** cobrem a camada proposta (automato / pre-filtro); a **string 2** ancora tudo no dominio de aplicacao (lavagem de dinheiro, layering).
+- A **string 6** existe para a secao de metodologia: o sistema le CSV no formato PaySim (`step, type, amount, nameOrig, nameDest, isFraud`), e sera preciso citar a origem e as limitacoes desse dataset.
+- A **string 7** e a mais restritiva e serve de teste de originalidade: se retornar poucos resultados, isso e evidencia a favor da nao-redundancia argumentada no item 3.3 da etapa (a).
+- Truncamento com `*` so nas bases que aceitam (ACM DL e ScienceDirect aceitam; conferir no Passo 5). Onde nao aceitar, expandir para `("pre-filter" OR "pre-filtering" OR "pre-filtered")` e `("automaton" OR "automata" OR "automata-based")`.
 
 ---
 

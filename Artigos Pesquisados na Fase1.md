@@ -13,10 +13,9 @@
 
 | Nome do Artigo | Nome da Base de Pesquisa | Link |
 |---|---|---|
-| `[preencher]` | `[preencher]` | `[preencher]` |
-| `[preencher]` | `[preencher]` | `[preencher]` |
-| `[preencher]` | `[preencher]` | `[preencher]` |
-| `[preencher]` | `[preencher]` | `[preencher]` |
+| `[Fast Parallel Algorithms for Enumeration of Simple, Temporal, and Hop-constrained Cycles (2023)]` | `[ACM Digital Library (ACM DL) - ACM Transactions on Parallel Computing]` | `[https://dl.acm.org/doi/full/10.1145/3611642]` |
+| `[Complex Event Recognition under Time Constraints: Towards a Formal Framework for Efficient Query Evaluation (2025)]` | `[ACM Digital Library (ACM DL) - Proceedings of the ACM on Management of Data]` | `[https://dl.acm.org/doi/10.1145/3725231]` |
+| `[GARG-AML against Smurfing: A Scalable and Interpretable Graph-Based Framework for Anti-Money Laundering (2025)]` | `[arXiv (Cornell University)]` | `[https://arxiv.org/abs/2506.04292]` |
 
 ---
 
