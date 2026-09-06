@@ -92,7 +92,7 @@
 
 ### Integrante 3 — `[Caio Winkler Marangoni]`
 - **O que fez nesta etapa:** `[Pesquisei artigos sobre o uso de inteligência artificial e Machine Learning para detecção de fraudes em tempo real e colaborei na redação do texto de justificativa.]`
-- **Tempo dedicado (aprox.):** `[ex.: 2h30]`
+- **Tempo dedicado (aprox.):** `[ex.: 3h30]`
 - **Evidência da contribuição:**
 `[https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4895921]`
 `[https://dl.acm.org/doi/abs/10.1145/3289402.3289530]`
