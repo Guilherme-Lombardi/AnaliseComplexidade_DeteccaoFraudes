@@ -34,9 +34,9 @@
 
 | Nome do Artigo | Nome da Base de Pesquisa | Link |
 |---|---|---|
-| `[preencher]` | `[preencher]` | `[preencher]` |
-| `[preencher]` | `[preencher]` | `[preencher]` |
-| `[preencher]` | `[preencher]` | `[preencher]` |
-| `[preencher]` | `[preencher]` | `[preencher]` |
+| `[Data Engineering for Fraud Detection]` | `[ScienceDirect (Elsevier)]` | `[https://www.sciencedirect.com/science/article/abs/pii/S0167923621000026?via%3Dihub]` |
+| `[Evaluating Machine Learning Algorithms for Financial Fraud Detection: Insights from Indonesia]` | `[MDPI]` | `[https://www.mdpi.com/2227-7390/13/4/600]` |
+| `[Parallel Path Detection for Fraudulent Accounts in Banks based on Graph Analysis]` | `[PubMed Central / Elsevier / IEEE Xplore]` | `[https://pmc.ncbi.nlm.nih.gov/articles/PMC10773873/#:~:text=We%20present%20a%20novel%20three%2Dstep%20approach%20to,directed%20graph%20from%20the%20bank's%20transaction%20records.]` |
+
 
 ---
