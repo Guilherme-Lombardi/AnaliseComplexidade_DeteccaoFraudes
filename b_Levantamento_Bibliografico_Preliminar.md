@@ -58,6 +58,10 @@
 | 5 | `[("pre-filter*" OR "candidate reduction" OR "pruning" OR "filtering layer") AND ("graph search" OR "graph traversal" OR "subgraph matching") AND ("real-time" OR "streaming" OR "low latency")]` | `[Processamento de Fluxos de Dados — a hipotese: reduzir o volume antes da travessia]` | `[ACM DL; ScienceDirect; arXiv]` | `[Caio Winkler Marangoni]` |
 | 6 | `[("PaySim" OR "synthetic financial dataset" OR "mobile money simulator") AND ("fraud" OR "money laundering")]` | `[Base experimental — origem e limites do dataset usado no sistema]` | `[Springer Link; IEEE Xplore; arXiv]` | `[Caio Winkler Marangoni]` |
 | 7 | `[("automat*" OR "complex event processing") AND ("pre-filter*" OR "filtering layer") AND ("cycle detection" OR "strongly connected components" OR "graph traversal") AND ("fraud" OR "money laundering")]` | `[String-sintese: reproduz a pergunta de pesquisa do item 1.1 (pipeline hibrido)]` | `[ACM DL; Springer Link; arXiv]` | `[Caio Winkler Marangoni]` |
+| 5 | `[("pre-filter*" OR "candidate reduction" OR "pruning" OR "filtering layer") AND ("graph search" OR "graph traversal" OR "subgraph matching") AND ("real-time" OR "streaming" OR "low latency")]` | `[Processamento de Fluxos de Dados — a hipotese: reduzir o volume antes da travessia]` | `[ACM DL; ScienceDirect; arXiv]` | `[Caio Winkler Marangoni]` |
+| 6 | `[("PaySim" OR "synthetic financial dataset" OR "mobile money simulator") AND ("fraud" OR "money laundering")]` | `[Base experimental — origem e limites do dataset usado no sistema]` | `[Springer Link; IEEE Xplore; arXiv]` | `[Caio Winkler Marangoni]` |
+| 7 | `[("automat*" OR "complex event processing") AND ("pre-filter*" OR "filtering layer") AND ("cycle detection" OR "strongly connected components" OR "graph traversal") AND ("fraud" OR "money laundering")]` | `[String-sintese: reproduz a pergunta de pesquisa do item 1.1 (pipeline hibrido)]` | `[ACM DL; Springer Link; arXiv]` | `[Caio Winkler Marangoni]` |
+
 
 **Observacoes sobre a construcao das strings**
 
