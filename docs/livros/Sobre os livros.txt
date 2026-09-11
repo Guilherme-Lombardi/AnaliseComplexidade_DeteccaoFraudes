@@ -1,0 +1,18 @@
+Algoritmos: teoria e prática (CLRS)
+
+* DFS e o Algoritmo de Kosaraju
+Capítulo 22 (Algoritmos para Grafos), Seções 22.3 (Busca em Profundidade) e 22.5 (Componentes Fortemente Conectados).
+
+https://computerscience360.files.wordpress.com/2018/02/algoritmos-teoria-e-prc3a1tica-3ed-thomas-cormen.pdf
+
+-----------------
+Networks Por Mark Newman
+capitulo 2 - Secao 7.1.1 (Degree Centrality)- pg 159
+https://books.google.com.br/books?hl=pt-BR&lr=&id=YdZjDwAAQBAJ&oi=fnd&pg=PP1&ots=V0N3_Mm8tu&sig=1ljOJtue9EmREfakuPXx6ji4H6A&redir_esc=y#v=onepage&q&f=false
+
+
+----------------
+
+Introduction to automata theory languages, and computation (Hopcroft) - Versao gratuita na biblioteca virtual da universidade
+*Automato finito determinístico
+Capítulo 2 (Autômatos Finitos).
