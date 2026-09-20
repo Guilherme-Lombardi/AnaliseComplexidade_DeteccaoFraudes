@@ -12,7 +12,7 @@
 | Projeto de Pesquisa / IC | `[Complexidade e Desempenho em Pipeline Híbrida para Detecção de Fraudes Financeiras]` |
 | Orientador(a) | `[Andrea Ono Sakai]` |
 | Data de entrega desta etapa | `[18/08/2026]` |
-| Integrantes do grupo | `[Guilherme Lombardi 1, Ryan dos Santos Veloso 2, Caio Winkler Marangoni 3, Guilherme Liborio Camargo 4, Julia Emily Leonardo Barbosa 5]` |
+| Integrantes do grupo | `[Guilherme Lombardi 1, Ryan dos Santos Veloso 2, Caio Winkler Marangoni 3, Guilherme Liborio Camargo 4]` |
 
 ---
 
@@ -77,7 +77,7 @@
 
 ### Integrante 1 — `[Guilherme Lombardi]`
 - **O que fez nesta etapa:** `[Busquei artigos sobre algoritmos de busca em grafos (como DFS), pesquisei sobre os limites de desempenho no processamento de grandes bases de dados e ajudei a selecionar os dois primeiros links, auxiliei no direcionamento do tema e das pesquisas e defini suas palavras-chave]`
-- **Tempo dedicado (aprox.):** `[ex.: 3h30]`
+- **Tempo dedicado:** `3h30`
 - **Evidência da contribuição** *(print de conversa, rascunho, e-mail, documento compartilhado etc.)*: 
 `[https://www.semanticscholar.org/paper/Benchmarking-Algorithms-for-Detecting-Anomalies-in-Carrasquilla/60d9e710304b9223c4206c0b29c192f7a0ed6f30]` 
 `[https://dl.acm.org/doi/abs/10.1145/3677052.3698648]`
