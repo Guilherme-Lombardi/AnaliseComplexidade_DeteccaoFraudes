@@ -248,7 +248,7 @@
 - `[Passo 4: Redigi os critérios de inclusão e exclusão técnicos para direcionar o escopo do projeto de 2020 a 2026.]` 
 - `[Passo 5: Consolidei os registros de buscas de todo o grupo, executei as varreduras com as strings 14 a 19 e organizei os metadados dos artigos em diretório local.]` 
 - `[Passos 6 e 7: Participei ativamente da triagem por título/resumo dos 721 resultados brutos, remoção de duplicatas e conduzi a leitura completa dos artigos para fechamento do conjunto definitivo de 16 publicações.]` 
-- **Tempo dedicado (aprox.):** `[18h]`
+- **Tempo dedicado:** 18h
 - **Evidência da contribuição** *(print de busca, planilha de triagem, exportação BibTeX, etc.)*: `[acervo digital dos PDFs organizados e postagens dos artigos no github]`
 
 ### Integrante 2 — `[Caio Winkler Marangoni]`
@@ -257,7 +257,7 @@
 - `[Passo 2: Criei as strings de busca de 1 a 7, conectando os eixos do projeto ao vocabulário técnico do sistema implementado pelo grupo (enumeração de ciclos, componentes fortemente conectados no scc.py e padrões do PaySim).]`
 - `[Passo 5: Executei as varreduras de teste e coleta das strings 1 a 7 nas bases ACM DL, IEEE Xplore, Springer Link, ScienceDirect e arXiv, registrando o volume de resultados de cada consulta.]`
 - `[Passos 6 e 7: Colaborei no processo de desduplicação e triagem por título/resumo e participei da leitura dos textos integrais dos artigos do eixo de algoritmos em grafos.]`
-- **Tempo dedicado (aprox.):** `[10h]`
+- **Tempo dedicado:** 10h
 - **Evidência da contribuição:** `[Definição das strings 1 a 7 na documentação e histórico de registros da primeira e segunda filtragem.]`
 
 ### Integrante 3 — `[Guilherme Libório Camargo]`
@@ -266,7 +266,7 @@
 - `[Passo 2: Formulei as strings de busca de 8 a 10 focadas em redes neurais em grafos (GNNs), processamento de eventos complexos e detecção de anomalias estruturais.]`
 - `[Passo 5: Realizei as buscas com as strings 8 a 10 nas bases Springer Link, IEEE Xplore, ACM DL, NeurIPS, Google Scholar e ScienceDirect, contabilizando o retorno de cada uma.]`
 - `[Passos 6 e 7: Atuei na filtragem de títulos e resumos para eliminação de trabalhos focados unicamente em IA caixa-preta e auxilei na seleção dos artigos do conjunto definitivo]`
-- **Tempo dedicado (aprox.):** `[ex.: 9h]`
+- **Tempo dedicado:** 9h
 - **Evidência da contribuição:** `[Mapeamento das strings 8 a 10 e registros de participação na planilha de triagem do grupo.]`
 
 ### Integrante 4 — `[Ryan dos Santos Veloso]`
@@ -275,7 +275,7 @@
 - `[Passo 2: Desenvolvi as strings de busca de 11 a 13 direcionadas à engenharia de dados, pré-processamento de transações e busca por caminhos paralelos/ciclos em redes bancárias.]`
 - `[Passo 5: Executei a busca das strings 11 a 13 nas bases ScienceDirect, MDPI, PubMed Central e IEEE Xplore, registrando a contagem de resultados retornados.]`
 - `[Passos 6 e 7: Participei das reuniões presenciais e remotas do grupo para discussão sobre a exclusão de artigos fora do escopo e leitura de introdução/conclusão dos artigos pré-selecionados.]`
-- **Tempo dedicado (aprox.):** `[9h]`
+- **Tempo dedicado:** 9h
 - **Evidência da contribuição:** `[Estruturação das strings 11 a 13 e participação nos registros das etapas de filtragem do PRISMA.]`
 
 ### Integrante 5 — `[Julia Emily Leonardo Barbosa]`
@@ -283,10 +283,8 @@
 - **O que fez em cada passo:**
 - `[Passo 6: Participou ativamente das conversas do grupo nas aulas vagas e no ambiente virtual para análise de títulos e resumos, auxiliando na identificação e remoção de duplicatas entre as bases.]`
 - `[Passo 7: Colaborou na leitura analítica de introdução e conclusão dos artigos pré-selecionados, ajudando no desempate de dúvidas com suporte de buscas complementares e no alinhamento às orientações da professora Andrea Ono Sakai.]`
-- **Tempo dedicado (aprox.):** `[6h]`
+- **Tempo dedicado:** 6h
 - **Evidência da contribuição:** `[Registro de participação na planilha de triagem do projeto e validação dos critérios de exclusão do conjunto final.]`
-
-*(Copie o bloco acima para cada integrante adicional do grupo.)*
 
 ### 4.1 Quadro-resumo de participação por passo
 
