@@ -77,7 +77,7 @@
 
 ### Integrante 1 — `[Guilherme Lombardi]`
 - **O que fez nesta etapa:** `[Busquei artigos sobre algoritmos de busca em grafos (como DFS), pesquisei sobre os limites de desempenho no processamento de grandes bases de dados e ajudei a selecionar os dois primeiros links, auxiliei no direcionamento do tema e das pesquisas e defini suas palavras-chave]`
-- **Tempo dedicado (aprox.):** `[ex.: 3h30]`
+- **Tempo dedicado:** 3h30
 - **Evidência da contribuição** *(print de conversa, rascunho, e-mail, documento compartilhado etc.)*: 
 `[https://www.semanticscholar.org/paper/Benchmarking-Algorithms-for-Detecting-Anomalies-in-Carrasquilla/60d9e710304b9223c4206c0b29c192f7a0ed6f30]` 
 `[https://dl.acm.org/doi/abs/10.1145/3677052.3698648]`
@@ -85,21 +85,21 @@
 
 ### Integrante 2 — `[Ryan dos Santos Veloso]`
 - **O que fez nesta etapa:** `[Pesquisei artigos científicos que mostram como transações bancárias e suspeitas de fraude são representadas em forma de grafos e ajudei a preencher a tabela de delimitação do tema. E ajudei nas pesquisas de filtragem contínua por autômatos]`
-- **Tempo dedicado (aprox.):** `[ex.: 3h]`
+- **Tempo dedicado:** 3h
 - **Evidência da contribuição:**
 `[https://dl.acm.org/doi/abs/10.1145/3690624.3709170]`
 `[https://dl.acm.org/doi/abs/10.1145/2675743.2771877]`
 
 ### Integrante 3 — `[Caio Winkler Marangoni]`
 - **O que fez nesta etapa:** `[Pesquisei artigos sobre o uso de inteligência artificial e Machine Learning para detecção de fraudes em tempo real e colaborei na redação do texto de justificativa.]`
-- **Tempo dedicado (aprox.):** `[ex.: 3h30]`
+- **Tempo dedicado:** 3h30
 - **Evidência da contribuição:**
 `[https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4895921]`
 `[https://dl.acm.org/doi/abs/10.1145/3289402.3289530]`
 
 ### Integrante 4 — `[Guilherme Liborio Camargo]`
 - **O que fez nesta etapa:** `[Realizei o levantamento bibliográfico sobre processamento de dados em fluxo (streaming) e filtragem contínua por autômatos, selecionando as fontes de pesquisa deste assunto.]`
-- **Tempo dedicado (aprox.):** `[ex.: 3h]`
+- **Tempo dedicado:** 3h
 - **Evidência da contribuição:** 
 `[https://hal.science/hal-04687320/]`
 `[https://dl.acm.org/doi/10.1145/2187671.2187677]`
@@ -107,7 +107,7 @@
 
 ### Integrante 5 — `[Julia Emily Leonardo Barbosa]`
 - **O que fez nesta etapa:** `[Procurei pesquisas sobre detecção de fraude em pagamentos digitais, organizei a tabela de avaliação de viabilidade do projeto e revisei a formatação geral do documento.]`
-- **Tempo dedicado (aprox.):** `[ex.: 2h45]`
+- **Tempo dedicado:** 2h30
 - **Evidência da contribuição:** 
 `[https://link.springer.com/article/10.1007/s10791-025-09549-7]`
 `[https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5076783]`
@@ -118,11 +118,11 @@
 
 | Integrante | Contribuição principal | % estimado de participação nesta etapa |
 |---|---|---|
-| `[Guilherme Lombardi 1]` | `[Pesquisa de artigos sobre grafos e travessia]` | `[ex.: 20%]` |
-| `[Ryan dos Santos Veloso 2]` | `[Pesquisa de grafos em fraudes e delimitação do tema]` | `[ex.: 20%]` |
-| `[Caio Winkler Marangoni 3]` | `[Pesquisa de Machine Learning em tempo real e justificativa]` | `[ex.: 20%]` |
-| `[Guilherme Liborio Camargo 4]` | `[Pesquisa de artigos sobre streams e autômatos]` | `[ex.: 20%]` |
-| `[Julia Emily Leonardo Barbosa 5]` | `[Pesquisa de IA em pagamentos e tabela de viabilidade]` | `[ex.: 20%]` |
+| `[Guilherme Lombardi 1]` | `[Pesquisa de artigos sobre grafos e travessia]` | 20% |
+| `[Ryan dos Santos Veloso 2]` | `[Pesquisa de grafos em fraudes e delimitação do tema]` | 20% |
+| `[Caio Winkler Marangoni 3]` | `[Pesquisa de Machine Learning em tempo real e justificativa]` | 20% |
+| `[Guilherme Liborio Camargo 4]` | `[Pesquisa de artigos sobre streams e autômatos]` | 20% |
+| `[Julia Emily Leonardo Barbosa 5]` | `[Pesquisa de IA em pagamentos e tabela de viabilidade]` | 20% |
 
 *A soma das porcentagens deve ser igual a 100%. Divergências de percepção sobre a participação devem ser discutidas em grupo antes do envio — o orientador pode solicitar esclarecimentos individuais em caso de disparidade relevante.*
 
