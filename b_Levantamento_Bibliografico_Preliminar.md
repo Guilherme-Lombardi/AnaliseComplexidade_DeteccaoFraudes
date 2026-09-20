@@ -31,8 +31,8 @@
 
 | Conceito-chave | Sinônimos / termos relacionados (PT) | Sinônimos / termos relacionados (EN) |
 |---|---|---|
-| `[ex.: Segurança]` | `[proteção, vulnerabilidade]` | `[security, vulnerability]` |
-| `[ex.: IoT]` | `[Internet das Coisas]` | `[Internet of Things, smart devices]` |
+| `[Segurança]` | `[proteção, vulnerabilidade]` | `[security, vulnerability]` |
+| `[IoT]` | `[Internet das Coisas]` | `[Internet of Things, smart devices]` |
 | `[Complexidade Assintótica ]` | `[Análise de algoritmos, Notação Big-O, Custo computacional, Limite assintótico, Escalonamento de desempenho ]` | `[Asymptotic complexity, Big-O notation, Computational cost, Algorithm scalability, Time-space complexity ]` |
 | `[Pré-filtragem por Autômatos Finitos ]` | `[Autômato Finito Determinístico (DFA), Processamento de Eventos Complexos (CEP), Filtro de entrada, Validação em tempo linear ]` | `[Deterministic Finite Automaton (DFA), Complex Event Processing (CEP), Stream filtering, Pattern matching automata, Edge filtering ]` |
 | `[Algoritmos de Travessia em Grafos ]` | `[Busca em Profundidade (DFS), Componentes Fortemente Conectados (Kosaraju), Detecção de ciclos, Centralidade de rede ]` | `[Depth-First Search (DFS), Kosaraju's algorithm, Strongly Connected Components (SCC), Graph traversal, Sub-graph detection ]` |
