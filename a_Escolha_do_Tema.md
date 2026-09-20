@@ -112,8 +112,6 @@
 `[https://link.springer.com/article/10.1007/s10791-025-09549-7]`
 `[https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5076783]`
 
-*(Copie o bloco acima para cada integrante adicional do grupo.)*
-
 ### 5.1 Quadro-resumo de participação
 
 | Integrante | Contribuição principal | % estimado de participação nesta etapa |
