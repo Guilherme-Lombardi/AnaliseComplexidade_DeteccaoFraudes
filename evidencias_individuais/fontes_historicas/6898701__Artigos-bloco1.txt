@@ -1,0 +1,15 @@
+Primeiro (Benchmarking Algorithms for Detecting Anomalies in Large Datasets):
+https://www.semanticscholar.org/paper/Benchmarking-Algorithms-for-Detecting-Anomalies-in-Carrasquilla/60d9e710304b9223c4206c0b29c192f7a0ed6f30
+
+
+Segundo (FraudGT: A Simple, Effective, and Efficient Graph Transformer for Financial Fraud Detection): 
+https://dl.acm.org/doi/abs/10.1145/3677052.3698648
+
+
+Terceiro (Benchmarking Fraud Detectors on Private Graph Data): 
+https://dl.acm.org/doi/abs/10.1145/3690624.3709170
+
+
+
+
+

@@ -1,0 +1,17 @@
+Primeiro (Big data stream processing):
+
+https://hal.science/hal-04687320/
+
+
+
+Segundo (Processing flows of information: From data stream to complex event processing)
+
+https://dl.acm.org/doi/10.1145/2187671.2187677
+
+
+
+Terceiro (The uncertain case of credit card fraud detection)
+
+https://dl.acm.org/doi/abs/10.1145/2675743.2771877
+
+
