@@ -1,0 +1,35 @@
+# LaTeX (arquivos auxiliares)
+*.aux
+*.log
+*.out
+*.toc
+*.lof
+*.lot
+*.bbl
+*.blg
+*.bcf
+*.run.xml
+*.fdb_latexmk
+*.fls
+*.synctex.gz
+*.lol
+*.idx
+*.ilg
+*.ind
+*.glo
+*.gls
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editores / IDEs
+.vscode/
+.idea/
+*.swp
+*~
+
+# Rascunhos locais
+rascunho/
+tmp/

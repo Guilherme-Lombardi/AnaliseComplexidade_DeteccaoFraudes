@@ -1,0 +1,9 @@
+# Normaliza finais de linha em texto
+* text=auto
+
+# Binários
+*.pdf binary
+
+# Evidências históricas: preservar bytes exatos
+# (o manifesto confere SHA-1/SHA-256 das cópias; normalizar finais de linha quebraria a conferência)
+evidencias/historico/** -text

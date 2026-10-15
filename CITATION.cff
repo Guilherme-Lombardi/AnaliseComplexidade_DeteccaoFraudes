@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "Se você utilizar este material, cite-o conforme os metadados abaixo."
+title: "Detecção de Fraudes em Transações Financeiras via Arquiteturas Híbridas (DFA/CEP + Grafos)"
+authors:
+  - family-names: "Lombardi"
+    given-names: "Guilherme"
+  - family-names: "Winkler Marangoni"
+    given-names: "Caio"
+  - family-names: "Camargo"
+    given-names: "Guilherme Liborio"
+  - family-names: "Veloso"
+    given-names: "Ryan dos Santos"
+repository-code: "https://github.com/Guilherme-Lombardi/AnaliseComplexidade_DeteccaoFraudes"
+license: MIT
+keywords:
+  - detecção de fraudes
+  - complexidade de algoritmos
+  - grafos
+  - autômatos finitos determinísticos
+  - processamento de eventos complexos
