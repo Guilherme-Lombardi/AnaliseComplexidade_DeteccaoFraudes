@@ -38,7 +38,7 @@ O recorte desta etapa é a revisão bibliográfica e a análise teórica das abo
 
 | Tema amplo (ponto de partida) | Tema delimitado (ponto de chegada) |
 |---|---|
-| Análise de complexidade e desempenho em algoritmos de busca e grafos. | Comparação entre o gargalo computacional dos algoritmos DFS/Kosaraju em grandes volumes e a eficiência do uso de Autômatos Finitos com Machine Learning para detecção de fraudes em tempo real. |
+| Análise de complexidade e desempenho em algoritmos de busca e grafos. | Comparação, a partir da literatura, entre o gargalo computacional do pipeline tradicional de grafos (DFS/Kosaraju) em grandes volumes de transações e a pré-filtragem por autômatos finitos determinísticos e processamento de eventos complexos (DFA/CEP), no contexto da detecção de fraudes bancárias em tempo real |
 
 ---
 
