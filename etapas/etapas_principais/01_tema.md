@@ -64,7 +64,6 @@ Tema delimitado e justificativa.
 | Guilherme Lombardi | Busquei artigos sobre algoritmos de busca em grafos (como DFS) e sobre limites de desempenho no processamento de grandes bases; ajudei a selecionar os dois primeiros links, auxiliei no direcionamento do tema e das pesquisas e defini suas palavras-chave. |
 | Ryan dos Santos Veloso | Pesquisei artigos sobre como transações bancárias e suspeitas de fraude são representadas em grafos, ajudei a preencher a tabela de delimitação do tema e a pesquisar filtragem contínua por autômatos. |
 | Caio Winkler Marangoni | Pesquisei artigos sobre IA e Machine Learning para detecção de fraudes em tempo real e colaborei na redação da justificativa. |
-| Guilherme Liborio Camargo | Fiz o levantamento bibliográfico sobre processamento de dados em fluxo (streaming) e filtragem contínua por autômatos, selecionando as fontes desse assunto. |
-| Julia Emily Leonardo Barbosa (ex-integrante, registro histórico) | Procurei pesquisas sobre detecção de fraude em pagamentos digitais, organizei a tabela de viabilidade e revisei a formatação geral do documento. |
+| Guilherme Liborio Camargo | Fiz o levantamento bibliográfico sobre processamento de dados em fluxo (streaming) e filtragem contínua por autômatos, selecionando as fontes desse assunto, procurei pesquisas sobre detecção de fraude em pagamentos digitais, organizei a tabela de viabilidade e revisei a formatação geral do documento. |
 
 > ⚠️ **REVISAR:** as contribuições vêm de (a), seção 5, e são históricas. Decidam se Julia continua na tabela. Se esta etapa nova exigir contribuições atuais, será preciso reescrevê-las.
