@@ -1,5 +1,5 @@
-# Etapa (a) — Escolha do Tema:
-Complexidade e Desempenho em Pipeline Híbrida para Detecção de Fraudes Financeiras
+# Etapa (a) — Escolha do Tema: Complexidade e Desempenho em Pipeline Híbrida para Detecção de Fraudes Financeiras
+
 
 > Documento preenchido em conjunto pelo grupo, com registro individualizado das contribuições. As orientações em itálico foram mantidas para apoiar a avaliação da orientadora.
 
