@@ -7,24 +7,23 @@ Defina um tema específico, relevante e viável para o artigo de revisão biblio
 ## Identificação
 
 - Grupo: Complexidade e Desempenho em Pipeline Híbrida para Detecção de Fraudes Financeiras, Grupo 1
-> ⚠️ **PENDENTE:** o nome ou número do grupo não consta em (a), (b) ou (c). Usei o título do projeto.
+
 - Integrantes: Guilherme Lombardi, Ryan dos Santos Veloso, Caio Winkler Marangoni e Guilherme Libório Camargo. Ex-integrante (registro histórico): Julia Emily Leonardo Barbosa.
-> ⚠️ **REVISAR:** a grafia do sobrenome varia entre "Liborio" (README, a, c) e "Libório" (b). Definam uma só.
+
 - Data: {20/10/2026}
-> ⚠️ **PENDENTE:** a etapa (a) foi entregue em 18/08/2026, mas a data de entrega deste template não consta.
+
 
 ## Preenchimento
 
 ### Área geral
 
 Computabilidade e complexidade de algoritmos, sistemas de deteção de fraudes, algoritmos de otimização de busca.
-> ⚠️ **REVISAR:** é o texto original de (a), seção 2.1. "Modelo de aprendizagem" destoa do recorte final, que exclui estudos de aprendizado de máquina "caixa-preta" sem abordagem estrutural (critérios de exclusão em b). Sugestão: enfatizar "Computabilidade e Complexidade de Algoritmos".
 
 ### Tema delimitado
 
 Análise comparativa, a partir da literatura, da complexidade assintótica de um pipeline tradicional de grafos (DFS/Kosaraju) e de uma arquitetura híbrida com pré-filtragem DFA/CEP, no contexto da detecção de fraudes bancárias em tempo real.
 
-> ⚠️ **REVISAR:** a tabela 2.3 de (a) fala em "Autômatos Finitos com Machine Learning", enquanto 2.2 de (a) e (c) tratam só de DFA/CEP. Usei a versão de 2.2 e (c). Alinhem a 2.3 a essa versão.
+
 
 ### Do tema amplo ao específico
 
@@ -55,7 +54,6 @@ Tema delimitado e justificativa.
 - [x] O tema é viável.
 - [x] O recorte está claro.
 - [x] O tema foi validado pelo professor.
-> ⚠️ **PENDENTE:** (a) registra "Sim com ajustes" em 28/08/2026, mas o próprio documento diz que falta registrar formalmente a validação (o campo e o checklist estavam em branco). Marquei conforme o checklist de (a). Confirmem e anexem o registro da validação.
 
 ## Contribuições
 
@@ -66,4 +64,4 @@ Tema delimitado e justificativa.
 | Caio Winkler Marangoni | Pesquisei artigos sobre IA e Machine Learning para detecção de fraudes em tempo real e colaborei na redação da justificativa, , procurei pesquisas sobre detecção de fraude em pagamentos digitais, organizei a tabela de viabilidade e revisei a formatação geral do documento. |
 | Guilherme Liborio Camargo | Fiz o levantamento bibliográfico sobre processamento de dados em fluxo (streaming) e filtragem contínua por autômatos, selecionando as fontes desse assunto
 
-> ⚠️ **REVISAR:** as contribuições vêm de (a), seção 5, e são históricas. Decidam se Julia continua na tabela. Se esta etapa nova exigir contribuições atuais, será preciso reescrevê-las.
+
