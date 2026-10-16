@@ -12,7 +12,7 @@
 | Projeto de Pesquisa / IC | Complexidade e Desempenho em Pipeline Híbrida para Detecção de Fraudes Financeiras |
 | Orientador(a) | Andrea Ono Sakai |
 | Data de entrega desta etapa | 10/09/2026 |
-| Integrantes atuais do grupo | Guilherme Lombardi; Ryan dos Santos Veloso; Caio Winkler Marangoni; Guilherme Liborio Camargo |
+| Integrantes atuais do grupo | Guilherme Lombardi; Ryan dos Santos Veloso; Caio Winkler Marangoni; Guilherme Libório Camargo |
 | Tema (da etapa "a") | Análise comparativa de complexidade assintótica entre um pipeline tradicional de grafos (DFS/Kosaraju) e uma arquitetura híbrida com pré-filtragem por Autômatos Finitos, aplicada à detecção de fraudes bancárias em tempo real. |
 
 ---
