@@ -142,8 +142,7 @@ Classifiquem os objetivos específicos em **Conceituais** e **Técnicos**.
 
 - **Objetivos Técnicos**
   - Resposta: Comparar teoricamente, a partir das fontes da etapa (b), as ordens de complexidade assintótica no pior caso entre o pipeline tradicional de varredura em grafos e a arquitetura híbrida com pré-filtragem por DFA/CEP, incluindo o custo do pré-filtro e as hipóteses sobre o tamanho dos grafos processados.
-  - Resposta: Comparar, de forma teórica e documental, as duas abordagens com base nas fontes selecionadas na etapa (b), sintetizando os tempos de resposta (latência) e a vazão (throughput) reportados pelos autores e as limitações de comparação entre os estudos.
-  - Resposta: Avaliar, exclusivamente a partir dos resultados publicados na literatura revisada, o impacto da pré-filtragem na taxa de retenção de eventos e no uso de recursos computacionais, identificando as fontes, as condições de avaliação e eventuais lacunas de evidência.
+  - Comparar e avaliar, exclusivamente a partir dos resultados publicados na literatura revisada na etapa (b), os tempos de resposta (latência), a vazão (throughput) e o uso de recursos computacionais das duas abordagens, bem como o impacto da redução de carga (load shedding e poda) proporcionada pela pré-filtragem DFA/CEP na taxa de retenção de eventos e nas taxas de falsos positivos e falsos negativos, identificando as fontes, as condições de avaliação, as limitações de comparação entre os estudos e eventuais lacunas de evidência.a.
 
 ---
 
