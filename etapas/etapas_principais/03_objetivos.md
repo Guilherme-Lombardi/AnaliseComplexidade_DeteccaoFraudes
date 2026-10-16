@@ -26,7 +26,7 @@ Analisar, com base na literatura selecionada na etapa (b), a complexidade assint
 
 | Elemento | Texto |
 |---|---|
-| Problema | Segundo a literatura revisada, como se comparam a complexidade assintótica no pior caso e os tempos de resposta reportados para a abordagem direta em grafos (DFS/Kosaraju) e para uma arquitetura com pré-filtragem por DFA/CEP no contexto da detecção de fraudes financeiras em tempo real, e sob quais hipóteses a redução de carga pode afetar esses custos? |
+| Problema | Segundo a literatura revisada, como se comparam a complexidade assintótica no pior caso e os tempos de resposta reportados para a abordagem direta em grafos (DFS/Kosaraju) e para uma arquitetura com pré-filtragem por DFA/CEP no contexto da detecção de fraudes financeiras em tempo real? |
 | Objetivo geral | Analisar, com base na literatura selecionada na etapa (b), a complexidade assintótica e as métricas de desempenho reportadas para a abordagem direta em grafos (DFS/Kosaraju) e para uma arquitetura com pré-filtragem por DFA/CEP na detecção de fraudes financeiras em tempo real, identificando as hipóteses, os custos e as limitações de cada abordagem. |
 | Resultado esperado | Uma análise comparativa teórica e documental que apresente (i) os fundamentos de DFS/Kosaraju e de DFA/CEP, (ii) a comparação das ordens de complexidade assintótica no pior caso entre o pipeline direto e o híbrido, (iii) a síntese dos tempos de resposta, vazão e consumo de memória reportados nos artigos revisados, com suas condições e limitações, e (iv) a distinção entre redução do volume processado e mudança da ordem assintótica. |
 
