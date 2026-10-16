@@ -1,4 +1,4 @@
-Artigos sobre CEP
+Artigos sobre CEP - Bloco 1
 
 DARLING DataAware Load Shedding in Complex Event(2021)
 https://dl.acm.org/doi/abs/10.14778/3494124.3494137
@@ -12,7 +12,7 @@ https://dl.acm.org/doi/abs/10.1145/3514221.3517829
 Operator as a Service Stateful Serverless Complex(2020)
 https://ieeexplore.ieee.org/abstract/document/9378142
 
-Artigos sobre Grafos financeiros
+Artigos sobre Grafos financeiros - Bloco 2
 
 Efficient Densest Flow Queries in Transaction(2026)
 https://ieeexplore.ieee.org/abstract/document/11471253
@@ -35,7 +35,7 @@ https://www.sciengine.com/DI/doi/10.3724/2096-7004.di.2024.0058
 TRacer Scalable Graph-based Transaction Tracing for Account-based Blockchain Trading Systems(2023)
 https://dl.acm.org/doi/abs/10.1109/TIFS.2023.3266162
 
-Artigos sobre Escalabilidade
+Artigos sobre Escalabilidade - Bloco 3
 
 An intelligent memetic approach to detect online fraud for distributed fintech environments(2025)
 https://link.springer.com/article/10.1007/s10660-025-10050-y
