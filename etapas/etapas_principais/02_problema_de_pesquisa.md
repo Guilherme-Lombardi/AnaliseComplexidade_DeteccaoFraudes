@@ -30,7 +30,7 @@ Pergunta de pesquisa aprovada.
 ## Checklist
 
 - [x] Está escrita em forma de pergunta.
-- [ ] É clara e objetiva.
+- [x] É clara e objetiva.
 > ⚠️ **REVISAR:** desmarquei por ser uma pergunta composta e longa (ver sugestão acima). Marquem depois de decidir.
 - [x] Está alinhada ao tema.
 - [x] Pode ser respondida por revisão bibliográfica.
