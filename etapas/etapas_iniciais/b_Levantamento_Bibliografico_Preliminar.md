@@ -26,7 +26,7 @@
 **1.1 Problema/pergunta de pesquisa (versão de trabalho)**
 *Ainda não precisa ser a versão final (isso vem na etapa "c"), mas deve orientar a busca desta fase.*
 
-> Em que medida a introdução de uma camada de pré-filtragem baseada em Autômatos Finitos reduz a complexidade assintótica e o tempo de resposta de um pipeline de detecção de fraudes bancárias em tempo real, quando comparada à varredura direta via DFS/Kosaraju?
+> Em que condições, segundo a literatura, a introdução de uma camada de pré-filtragem DFA/CEP altera o volume processado e os custos de processamento do pipeline, sem pressupor redução da complexidade assintótica no pior caso?
 
 **1.2 Conceitos-chave e sinônimos**
 *Liste os conceitos centrais da pergunta e seus sinônimos, em português e inglês.*
