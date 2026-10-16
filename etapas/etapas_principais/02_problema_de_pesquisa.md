@@ -10,8 +10,7 @@ Análise comparativa, a partir da literatura, da complexidade assintótica de um
 
 ## Pergunta de pesquisa
 
-Segundo a literatura revisada, como se comparam a complexidade assintótica no pior caso e os tempos de resposta reportados para a abordagem direta em grafos (DFS/Kosaraju) e para uma arquitetura com pré-filtragem por DFA/CEP no contexto da detecção de fraudes financeiras em tempo real, e sob quais hipóteses a redução de carga pode afetar esses custos?
-
+Segundo a literatura revisada, como se comparam a complexidade assintótica no pior caso e os tempos de resposta reportados para a abordagem direta em grafos (DFS/Kosaraju) e para uma arquitetura com pré-filtragem por DFA/CEP no contexto da detecção de fraudes financeiras em tempo real?
 > ⚠️ **REVISAR:** é a versão final de (c), mas tem duas perguntas em uma ("como se comparam…" e "sob quais hipóteses…"), e o template pede uma única pergunta. Sugestão de pergunta única: *"Segundo a literatura revisada, como se comparam a complexidade assintótica no pior caso e os tempos de resposta reportados para DFS/Kosaraju e para uma arquitetura com pré-filtragem DFA/CEP na detecção de fraudes financeiras em tempo real?"*, deixando "sob quais hipóteses a redução de carga afeta esses custos" como desdobramento nos objetivos.
 > ⚠️ **REVISAR:** (b), item 1.1, traz uma versão de trabalho ("Em que medida a introdução de uma camada de pré-filtragem… reduz a complexidade assintótica…") que pressupõe a redução. Não a usei porque o escopo atual diz não pressupor ganho no pior caso.
 
