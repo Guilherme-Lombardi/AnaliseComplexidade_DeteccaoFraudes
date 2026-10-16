@@ -8,9 +8,9 @@ Defina um tema específico, relevante e viável para o artigo de revisão biblio
 
 - Grupo: Complexidade e Desempenho em Pipeline Híbrida para Detecção de Fraudes Financeiras, Grupo 1
 > ⚠️ **PENDENTE:** o nome ou número do grupo não consta em (a), (b) ou (c). Usei o título do projeto.
-- Integrantes: Guilherme Lombardi, Ryan dos Santos Veloso, Caio Winkler Marangoni e Guilherme Liborio Camargo. Ex-integrante (registro histórico): Julia Emily Leonardo Barbosa.
+- Integrantes: Guilherme Lombardi, Ryan dos Santos Veloso, Caio Winkler Marangoni e Guilherme Libório Camargo. Ex-integrante (registro histórico): Julia Emily Leonardo Barbosa.
 > ⚠️ **REVISAR:** a grafia do sobrenome varia entre "Liborio" (README, a, c) e "Libório" (b). Definam uma só.
-- Data: {dd/mm/aaaa}
+- Data: {20/10/2026}
 > ⚠️ **PENDENTE:** a etapa (a) foi entregue em 18/08/2026, mas a data de entrega deste template não consta.
 
 ## Preenchimento
