@@ -6,7 +6,7 @@ Defina um tema específico, relevante e viável para o artigo de revisão biblio
 
 ## Identificação
 
-- Grupo: Grupo 1 = Complexidade e Desempenho em Pipeline Híbrida para Detecção de Fraudes Financeiras (Computabilidade e Complexidade de Algoritmos; orientadora: Andrea Ono Sakai)
+- Grupo: Grupo 1 = Complexidade e Desempenho em Pipeline Híbrida para Detecção de Fraudes Financeiras 
 > ⚠️ **PENDENTE:** o nome ou número do grupo não consta em (a), (b) ou (c). Usei o título do projeto.
 - Integrantes: Guilherme Lombardi, Ryan dos Santos Veloso, Caio Winkler Marangoni e Guilherme Liborio Camargo. Ex-integrante (registro histórico): Julia Emily Leonardo Barbosa.
 > ⚠️ **REVISAR:** a grafia do sobrenome varia entre "Liborio" (README, a, c) e "Libório" (b). Definam uma só.
