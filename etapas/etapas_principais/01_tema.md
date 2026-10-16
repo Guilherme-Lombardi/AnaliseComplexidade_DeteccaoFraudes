@@ -17,7 +17,7 @@ Defina um tema específico, relevante e viável para o artigo de revisão biblio
 
 ### Área geral
 
-Sistema de detecção de fraude, algoritmos de otimização de busca, modelo de aprendizagem e complexidade dos algoritmos.
+Computabilidade e complexidade de algoritmos, sistemas de deteção de fraudes, algoritmos de otimização de busca.
 > ⚠️ **REVISAR:** é o texto original de (a), seção 2.1. "Modelo de aprendizagem" destoa do recorte final, que exclui estudos de aprendizado de máquina "caixa-preta" sem abordagem estrutural (critérios de exclusão em b). Sugestão: enfatizar "Computabilidade e Complexidade de Algoritmos".
 
 ### Tema delimitado
