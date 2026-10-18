@@ -45,17 +45,6 @@ Registre as buscas realizadas e justifique a inclusão ou exclusão de cada arti
 | Springer Link | Strings 15, 17 e 19 | 09/09/2026 | 2020–2026; inglês ou português; artigo científico (previsto na etapa 4) | 55 | Guilherme Lombardi |
 | Google Scholar | Strings 3 e 4 | 09/09/2026 | 2020–2026; inglês ou português; artigo científico (previsto na etapa 4) | 61 | Guilherme Lombardi |
 
-Nenhum filtro aplicado nas bases (período, idioma, tipo) foi registrado.
-
-A coluna "Filtros" indica os critérios de período, idioma e tipo previstos no planejamento (etapa 4); a aplicação efetiva desses filtros em cada base não foi registrada.
-
-## Limitações do registro
-
-- **Total de resultados.** As 36 linhas somam 684 resultados. O fluxo declarado parte de 721; a diferença de 37 não tem origem localizada e as contagens não foram estimadas.
-- **Evidências.** Os prints ou exportações das buscas ainda não foram anexados.
-- **Buscas agrupadas.** As quatro linhas de Guilherme Lombardi (09/09/2026) agrupam várias strings em uma única contagem, de modo que o resultado por string não é recuperável. Essas linhas também diferem do mapeamento strings-bases do planejamento (etapa 4): o Springer Link não está previsto para as strings 15, 17 e 19, e o Google Scholar está previsto para as strings 14 a 19, mas foi registrado com as strings 3 e 4.
-- **Strings exploratórias.** As strings 6, 10 e 12 são exploratórias e estão fora do recorte principal (etapa 4); somam 96 dos 684 resultados registrados.
-- **Triagem artigo a artigo.** A planilha de triagem (aba "Triagem de Artigos") não foi anexada. Por isso, o motivo individual das exclusões (38 na leitura completa e 142 por título e resumo) consta apenas de forma geral.
 
 ## Resumo da triagem
 
