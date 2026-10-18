@@ -97,7 +97,6 @@ Esta tabela descreve o comportamento geral de cada base. A sintaxe efetivamente 
 | Tipo de publicação | Artigos de periódico e anais de conferência | Excluir capítulos de livro, editoriais e resumos expandidos, onde a base permitir. |
 | Campos de busca | Título, resumo e palavras-chave | Texto completo apenas quando a base não permitir restringir por campo. |
 
-Os valores desta tabela seguem os critérios de inclusão. Se alguma base foi consultada com configuração diferente, ajustar a linha correspondente e anexar o print do filtro à evidência individual da busca.
 
 ## Produto da etapa
 
