@@ -261,8 +261,8 @@ Não utilizada.
 ### Identificação do artigo
 
 - Referência completa: JIANG, Jiaxin; ZHAO, Yunxiang; XU, Lyu; CHOI, Byron; HE, Bingsheng; SUN, Shixuan; CHEN, Jia. “Efficient Densest Flow Queries in Transaction Flow Networks (Complete Version)”. Preprint arXiv, 2026.
-- DOI ou URL: Não informado no material disponível.
-- Base de origem: Não identificada no material disponível.
+- DOI ou URL: https://doi.org/10.1109/TKDE.2026.3669778
+- Base de origem: IEEE Xplore; preprint também disponibilizado no arXiv.
 - Leitor responsável: Guilherme Libório
 - Data da leitura: 17/10/2026.
 
@@ -314,13 +314,14 @@ Não utilizada.
 
 ---
 
-## Ficha 06/14 — CAPOZZI et al. — WeirdFlows (2025)
+## Ficha 06/14 — CAPOZZI et al. — WeirdFlows (2025) / FlowSeries: Anomaly Detection in Financial Transaction Flows
 
 ### Identificação do artigo
 
 - Referência completa: CAPOZZI, Arthur; VILELLA, Salvatore; MONCALVO, Dario; FORNASIERO, Marco; RICCI, Valeria; RONCHIADIN, Silvia; RUFFO, Giancarlo. “WeirdFlows: Anomaly Detection in Financial Transaction Flows”. In: *ITADATA2024: The 3rd Italian Conference on Big Data and Data Science*. Preprint arXiv:2503.15896, versão de 1º de abril de 2025.
-- DOI ou URL: Não informado no material disponível.
-- Base de origem: Não identificada no material disponível.
+- DOI ou URL: https://link.springer.com/chapter/10.1007/978-3-031-82435-7_3; preprint também disponibilizado no arXiv (Nome antes da publicação > WeirdFlows: Anomaly Detection in Financial
+Transaction Flows).
+- Base de origem: Springer Nature Link
 - Leitor responsável: Guilherme Libório
 - Data da leitura: 17/10/2026.
 
@@ -372,7 +373,7 @@ Não utilizada.
 
 ---
 
-## Ficha 07/14 — CAPOZZI et al. — FlowSeries (2025)
+## Ficha 07/14 — CAPOZZI et al. — FlowSeries: flow analysis on financial networks (2025)
 
 ### Identificação do artigo
 
@@ -609,8 +610,8 @@ Não utilizada.
 ### Identificação do artigo
 
 - Referência completa: WU, Zhiying; WU, Jiajing; ZHENG, Zibin; LIU, Jieli. “TRacer: Scalable Graph-based Transaction Tracing for Account-based Blockchain Trading Systems”. *IEEE Transactions on Information Forensics and Security*, v. 18, pp. 2541–2555, 2023.
-- DOI ou URL: Não informado no material disponível.
-- Base de origem: IEEE Xplore.
+- DOI ou URL: https://doi.org/10.1109/TIFS.2023.3266162
+- Base de origem: IEEE Xplore; preprint também disponibilizado no arXiv.
 - Leitor responsável: Ryan Santos
 - Data da leitura: 17/10/2026.
 
@@ -725,8 +726,8 @@ Não utilizada.
 ### Identificação do artigo
 
 - Referência completa: IYER, Anand Padmanabha; LIU, Zaoxing; JIN, Xin; VENKATARAMAN, Shivaram; BRAVERMAN, Vladimir; STOICA, Ion. “ASAP: Fast, Approximate Graph Pattern Mining at Scale”. In: *13th USENIX Symposium on Operating Systems Design and Implementation* (OSDI ’18), 2018, pp. 745–761.
-- DOI ou URL: Não informado no material disponível.
-- Base de origem: USENIX (anais de conferência; não ACM Digital Library como indicado implicitamente no template).
+- DOI ou URL: https://www.usenix.org/conference/osdi18/presentation/iyer ou https://dl.acm.org/doi/abs/10.5555/3291168.3291224
+- Base de origem: USENIX (anais de conferência; ACM Digital Library).
 - Leitor responsável: Ryan Santos
 - Data da leitura: 17/10/2026.
 
