@@ -10,6 +10,22 @@
 
 **Como reproduzir:** os comandos estão no [README](README.md). Os números deste relatório vêm de `resultados/*.json` e de [`resultados/TABELAS.md`](resultados/TABELAS.md).
 
+**Atualização de 02/11/2026: correções aplicadas.** Depois deste relatório, as correções de baixo risco foram aplicadas no NodeWatch (branch `ml/arquitetura-unificada`):
+
+| Correção | Resultado |
+|---|---|
+| `z_valor_origem` com piso de variância e somas deslocadas | 0 divergências contra a força bruta nas mesmas 2.000 transações reais (`resultados/b_verificacao_implementacao_pos_correcao.json`) |
+| `tol=1e-6` na regressão logística | AP de validação na lavagem: 0,19 |
+| Previsões de menos de 1.000 linhas com 1 thread | Mesmo resultado, sem o custo de threads |
+| Testes de força bruta em `testes/ml` | 88 testes passando |
+| Recall por tipologia e por tentativa nova | Gerado automaticamente pela avaliação |
+
+O modelo foi retreinado e reavaliado com a mesma configuração:
+- **Rede:** sem mudança.
+- **Lavagem:** AP de validação 0,499 e de teste 0,464, com precisão 0,627, recall 0,407, F1 0,494 e 231 falsos positivos.
+
+O restante deste relatório descreve o estado auditado (commit `893ceea`).
+
 ---
 
 ## Resumo para a professora

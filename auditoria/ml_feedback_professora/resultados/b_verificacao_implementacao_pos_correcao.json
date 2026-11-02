@@ -1,0 +1,219 @@
+{
+  "gerado_em_utc": "2026-11-02T08:38:35+00:00",
+  "script": "b_verificar_implementacao.py",
+  "ambiente": {
+    "sistema": "Windows-11-10.0.26200-SP0",
+    "processador": "13th Gen Intel(R) Core(TM) i7-13650HX",
+    "nucleos_logicos": 20,
+    "ram_total_gb": 15.73,
+    "ram_livre_gb": 2.91,
+    "carga_memoria_pct": 81,
+    "python": "3.14.0",
+    "versoes": {
+      "numpy": "2.5.4",
+      "pandas": "3.1.0",
+      "scikit-learn": "1.9.1",
+      "scipy": "1.18.1",
+      "joblib": "1.6.0",
+      "xgboost": "3.4.1"
+    },
+    "threads": 4,
+    "variaveis_threads": {
+      "OMP_NUM_THREADS": "4",
+      "OPENBLAS_NUM_THREADS": "4",
+      "MKL_NUM_THREADS": "4"
+    },
+    "nodewatch": {
+      "commit": "893ceeae79a5f86294e6c69c40b34a041217c781",
+      "branch": "ml/arquitetura-unificada",
+      "alteracoes_nao_commitadas_rastreadas": [
+        "M docs/ml/RELATORIO_ML.md",
+        " M docs/ml/exemplos/previsoes_lavagem_amostra.csv",
+        " M docs/ml/exemplos/previsoes_rede_amostra.csv",
+        " M docs/ml/notas_relatorio.md",
+        " M docs/ml/resultados/auditoria_financeiro.json",
+        " M docs/ml/resultados/avaliacao_estado_rede.json",
+        " M docs/ml/resultados/avaliacao_lavagem.json",
+        " M docs/ml/resultados/metadados_modelo.json",
+        " M docs/ml/resultados/treino_estado_rede.json",
+        " M docs/ml/resultados/treino_lavagem.json",
+        " M src/ml/modelos.py",
+        " M src/ml/preparacao.py"
+      ]
+    }
+  },
+  "rede": {
+    "regra_classe_atual": {
+      "concordancia_total": 0.9994400426406032,
+      "concordancia_por_split": {
+        "treino": 0.9994282376045641,
+        "validacao": 0.99935469993547,
+        "teste": 0.999587897191194
+      },
+      "linhas_divergentes": 187,
+      "matriz_regra_x_classe_atual": {
+        "FALHA": {
+          "FALHA": 12449,
+          "OK": 0,
+          "RISCO": 2
+        },
+        "OK": {
+          "FALHA": 0,
+          "OK": 292283,
+          "RISCO": 0
+        },
+        "RISCO": {
+          "FALHA": 169,
+          "OK": 16,
+          "RISCO": 29035
+        }
+      },
+      "alvo_igual_classe_atual_seguinte": 0.9998262531491616
+    },
+    "validacao": {
+      "matriz_igual": true,
+      "macro_f1": [
+        0.7628197569116848,
+        0.7628197569116848
+      ],
+      "balanced_accuracy": [
+        0.7089941122513559,
+        0.7089941122513558
+      ],
+      "inicios_evento": [
+        [
+          2256,
+          110
+        ],
+        [
+          2256,
+          110
+        ]
+      ],
+      "falsos_por_fluxo_hora": [
+        0.306517530651753,
+        0.306517530651753
+      ],
+      "limiar_max_f1": {
+        "funcao": [
+          0.3173479675565243,
+          0.6729857819905213
+        ],
+        "exaustivo": [
+          0.3173479675565243,
+          0.6729857819905213
+        ]
+      },
+      "ece": [
+        0.00810583768042085,
+        0.00810583768042085
+      ]
+    },
+    "teste": {
+      "matriz_igual": true,
+      "macro_f1": [
+        0.7499003079505945,
+        0.7499003079505945
+      ],
+      "balanced_accuracy": [
+        0.7022544239474643,
+        0.7022544239474643
+      ],
+      "inicios_evento": [
+        [
+          2229,
+          100
+        ],
+        [
+          2229,
+          100
+        ]
+      ],
+      "falsos_por_fluxo_hora": [
+        0.30810107363626504,
+        0.30810107363626504
+      ],
+      "ece": [
+        0.009715052031466886,
+        0.009715052031466886
+      ]
+    }
+  },
+  "financeiro": {
+    "tempos_memoria": {
+      "leitura_hismall": {
+        "segundos": 9.105746899964288,
+        "cpu_segundos": 12.28125,
+        "privada_antes_mb": 535.26953125,
+        "privada_pico_mb": 2498.671875,
+        "acrescimo_pico_mb": 1963.40234375,
+        "privada_depois_mb": 1684.84765625
+      },
+      "ajuste_preparador": {
+        "segundos": 4.059886600007303,
+        "cpu_segundos": 4.0625,
+        "privada_antes_mb": 1725.01953125,
+        "privada_pico_mb": 1929.9921875,
+        "acrescimo_pico_mb": 204.97265625,
+        "privada_depois_mb": 958.0078125
+      },
+      "vetorizado_amostra": {
+        "segundos": 12.421874499996193,
+        "cpu_segundos": 12.265625,
+        "privada_antes_mb": 1074.26953125,
+        "privada_pico_mb": 1961.76171875,
+        "acrescimo_pico_mb": 887.4921875,
+        "privada_depois_mb": 1179.01953125
+      },
+      "forca_bruta_amostra": {
+        "segundos": 22.98952920001466,
+        "cpu_segundos": 22.734375,
+        "privada_antes_mb": 1179.01953125,
+        "privada_pico_mb": 1275.32421875,
+        "acrescimo_pico_mb": 96.3046875,
+        "privada_depois_mb": 1042.265625
+      },
+      "vetorizado_teste_completo": {
+        "segundos": 16.345351499971002,
+        "cpu_segundos": 16.125,
+        "privada_antes_mb": 1049.6171875,
+        "privada_pico_mb": 2361.57421875,
+        "acrescimo_pico_mb": 1311.95703125,
+        "privada_depois_mb": 1380.609375
+      }
+    },
+    "preparador_reajustado_igual_ao_salvo": true,
+    "moedas_sem_taxa": [],
+    "amostra": {
+      "consultas": 2000,
+      "positivas": 500,
+      "por_split": {
+        "treino": 1245,
+        "validacao": 387,
+        "teste": 368
+      },
+      "transacoes_de_historico_consideradas": 588638,
+      "colunas_comparadas": 49,
+      "colunas_divergentes": {
+        "razao_saida_entrada_24h": {
+          "divergentes": 8,
+          "max_abs": 61304.33557510376,
+          "max_rel": 0.006849897009382019
+        }
+      },
+      "max_rel_por_coluna": {
+        "log_valor_usd": 5.823276339099367e-08,
+        "soma_env_origem_usd_24h": 0.006849897009382019,
+        "z_valor_origem": 2.2531186684836045e-07,
+        "soma_rec_origem_usd_24h": 0.018903395899240335,
+        "razao_saida_entrada_24h": 0.006849897009382019
+      }
+    },
+    "cache_teste": {
+      "linhas": 862792,
+      "mesma_ordem_de_transacoes": true,
+      "celulas": 42276808,
+      "celulas_identicas": 42276808
+    }
+  }
+}
