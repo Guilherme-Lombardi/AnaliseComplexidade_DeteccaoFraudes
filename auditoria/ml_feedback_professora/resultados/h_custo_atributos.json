@@ -1,0 +1,101 @@
+{
+  "gerado_em_utc": "2026-11-02T07:35:12+00:00",
+  "script": "h_custo_atributos.py",
+  "ambiente": {
+    "sistema": "Windows-11-10.0.26200-SP0",
+    "processador": "13th Gen Intel(R) Core(TM) i7-13650HX",
+    "nucleos_logicos": 20,
+    "ram_total_gb": 15.73,
+    "ram_livre_gb": 1.87,
+    "carga_memoria_pct": 88,
+    "python": "3.14.0",
+    "versoes": {
+      "numpy": "2.5.4",
+      "pandas": "3.1.0",
+      "scikit-learn": "1.9.1",
+      "scipy": "1.18.1",
+      "joblib": "1.6.0",
+      "xgboost": "3.4.1"
+    },
+    "threads": 4,
+    "variaveis_threads": {
+      "OMP_NUM_THREADS": "4",
+      "OPENBLAS_NUM_THREADS": "4",
+      "MKL_NUM_THREADS": "4"
+    },
+    "nodewatch": {
+      "commit": "893ceeae79a5f86294e6c69c40b34a041217c781",
+      "branch": "ml/arquitetura-unificada",
+      "alteracoes_nao_commitadas_rastreadas": []
+    }
+  },
+  "medicoes": [
+    {
+      "transacoes_pontuadas": 1,
+      "historico": 5078345,
+      "atributos": {
+        "n": 5,
+        "mediana_s": 12.028362600016408,
+        "min_s": 11.567960700020194,
+        "max_s": 12.296340600005351,
+        "iqr_s": 0.09233879996463656
+      },
+      "classificador_rf": {
+        "n": 5,
+        "mediana_s": 0.02871059998869896,
+        "min_s": 0.026817600009962916,
+        "max_s": 0.11807620001491159,
+        "iqr_s": 0.0013288999907672405
+      }
+    },
+    {
+      "transacoes_pontuadas": 1000,
+      "historico": 5078345,
+      "atributos": {
+        "n": 3,
+        "mediana_s": 11.675332200014964,
+        "min_s": 11.49587009998504,
+        "max_s": 11.835733200074174
+      },
+      "classificador_rf": {
+        "n": 3,
+        "mediana_s": 0.028148000012151897,
+        "min_s": 0.02736659999936819,
+        "max_s": 0.028298099990934134
+      }
+    },
+    {
+      "transacoes_pontuadas": 100000,
+      "historico": 5078345,
+      "atributos": {
+        "n": 3,
+        "mediana_s": 12.271603500004858,
+        "min_s": 12.250111500034109,
+        "max_s": 12.37853950005956
+      },
+      "classificador_rf": {
+        "n": 3,
+        "mediana_s": 0.15431060001719743,
+        "min_s": 0.15393499995116144,
+        "max_s": 0.1600823999615386
+      }
+    },
+    {
+      "transacoes_pontuadas": 862792,
+      "historico": 5078345,
+      "atributos": {
+        "n": 2,
+        "mediana_s": 15.219671749917325,
+        "min_s": 15.138443999923766,
+        "max_s": 15.300899499910884
+      },
+      "classificador_rf": {
+        "n": 2,
+        "mediana_s": 1.2432365000713617,
+        "min_s": 1.2363269000779837,
+        "max_s": 1.2501461000647396
+      }
+    }
+  ],
+  "nota": "Sem aquecimento separado: cada chamada reconstrói os índices, então a 1ª e as demais custam igual. O classificador é a RF salva (n_jobs=4)."
+}
