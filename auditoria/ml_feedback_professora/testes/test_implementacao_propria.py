@@ -155,3 +155,56 @@ def test_inicios_de_evento_iguais_a_laco():
                 n += 1
                 det += p[i] != "OK"
     assert r["inicios_nao_ok"]["n"] == n and r["inicios_nao_ok"]["detectados_nao_ok"] == det
+
+
+@pytest.mark.parametrize("n_classes", [2, 3])
+def test_objetivo_da_logistica_confere_com_otimo_do_sklearn(n_classes):
+    """Risco: a conferência de convergência (i_regressao_logistica.py) usar normalização errada.
+
+    No ótimo de um ajuste com tolerância apertada o gradiente calculado à mão
+    deve ser ~0; perturbar os coeficientes deve aumentar o objetivo.
+    """
+    from sklearn.linear_model import LogisticRegression
+    from i_regressao_logistica import objetivo_e_gradiente
+
+    rng = np.random.default_rng(9)
+    Z = rng.normal(size=(500, 4))
+    y = rng.integers(0, n_classes, 500)
+    w = rng.choice([1.0, 5.0], 500)
+    est = LogisticRegression(C=0.3, tol=1e-12, max_iter=10_000).fit(Z, y, sample_weight=w)
+    og = objetivo_e_gradiente(est, Z, y, w)
+    assert og["norma_inf_gradiente"] < 1e-6
+    est.coef_ = est.coef_ + 1e-2
+    assert objetivo_e_gradiente(est, Z, y, w)["objetivo"] > og["objetivo"]
+
+
+def test_contrato_da_cabeca_aceita_outro_estimador(tmp_path):
+    """Risco: a troca de modelo (ex.: XGBoost) quebrar a ordem das classes ou a persistência."""
+    xgb = pytest.importorskip("xgboost")
+    from comum import ClassificadorRotulado
+    from src.ml.esquemas import FEATURES_REDE
+    from src.ml.modelos import CabecaClassificacao
+    from src.ml.preparacao import matriz_rede, montar_pipeline_rede
+
+    rng = np.random.default_rng(8)
+    n = 600
+    df = pd.DataFrame(rng.random((n, len(FEATURES_REDE))), columns=list(FEATURES_REDE))
+    df["rtt_ausente"] = (rng.random(n) < 0.05).astype(float)
+    y = np.where(df["perda_pct"] > 0.8, "FALHA", np.where(df["razao_rtt_p95"] > 0.7, "RISCO", "OK")).astype(object)
+    X = matriz_rede(df)
+    pipe = montar_pipeline_rede(None, linear=False)
+    pre = pipe[:-1].fit(X)
+    mapa = {c: i for i, c in enumerate(CLASSES_REDE)}
+    codigos = np.array([mapa[v] for v in y])
+    m = xgb.XGBClassifier(n_estimators=20, max_depth=3, tree_method="hist", device="cpu", n_jobs=1)
+    m.fit(pre.transform(X), codigos)
+    pipe.steps[-1] = ("modelo", ClassificadorRotulado(m, list(CLASSES_REDE)))
+    cab = CabecaClassificacao("estado_rede", pipe, list(CLASSES_REDE), list(X.columns), "xgboost", {}, 0.5)
+    p1 = cab.probabilidades(X)
+    joblib.dump(cab, tmp_path / "cab.joblib")
+    p2 = joblib.load(tmp_path / "cab.joblib").probabilidades(X)
+    assert np.array_equal(p1, p2)
+    acerto = (np.asarray(CLASSES_REDE, dtype=object)[np.argmax(p1, axis=1)] == y).mean()
+    assert acerto > 0.9
+    with pytest.raises(ValueError):
+        cab.probabilidades(X[list(X.columns)[::-1]])
