@@ -43,7 +43,7 @@ from src.ml.modelos import recriar_estimador
 from src.ml.preparacao import MINUTOS_DIA, matriz_rede, montar_pipeline_financeiro, montar_pipeline_rede
 
 CLASSES = np.asarray(CLASSES_REDE, dtype=object)
-FAMILIA_NODEWATCH = {"rf": "random_forest", "rf_nb": "random_forest", "rf_red": "random_forest",
+FAMILIA_NODEWATCH = {"rf": "random_forest", "rf_nb": "random_forest", "rf_red": "random_forest", "rf_busca": "random_forest",
                      "hgb": "hist_gradient_boosting",
                      "lr": "logistica"}
 SEMENTES = (42, 43, 44)
@@ -74,6 +74,10 @@ def grade(dominio: str, familia: str) -> List[Dict[str, Any]]:
         "hgb": [{"max_iter": 300, "learning_rate": 0.1, "max_leaf_nodes": f, "l2_regularization": 1.0} for f in (31, 63)],
         "lr": [{"C": C} for C in (0.1, 1.0)],
         "xgb": [{"max_depth": d, "min_child_weight": m} for d in (6, 8) for m in (1, 10)],
+        # A grade de produção da lavagem tem uma só RF; para comparar com o XGBoost no mesmo
+        # número de tentativas (4), varia árvores e folha mínima. A curva de árvores da RF
+        # de produção ainda sobe em 100 árvores (validação).
+        "rf_busca": [{"n_estimators": n, "min_samples_leaf": f, "max_samples": 0.5} for n in (100, 200) for f in (10, 50)],
     }[familia]
 
 
@@ -285,7 +289,7 @@ def curva_arvores(dominio: str, pipe: Any, d: Dict[str, Any]) -> List[Dict[str, 
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--dominio", choices=("rede", "lavagem"), required=True)
-    ap.add_argument("--familia", choices=("rf", "rf_nb", "rf_red", "hgb", "lr", "xgb"), required=True)
+    ap.add_argument("--familia", choices=("rf", "rf_nb", "rf_red", "rf_busca", "hgb", "lr", "xgb"), required=True)
     args = ap.parse_args()
     dom, fam = args.dominio, args.familia
     classes = classes_dominio(dom)
