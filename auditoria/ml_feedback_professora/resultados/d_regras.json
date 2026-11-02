@@ -1,0 +1,799 @@
+{
+  "gerado_em_utc": "2026-11-02T07:31:36+00:00",
+  "script": "d_regras.py",
+  "ambiente": {
+    "sistema": "Windows-11-10.0.26200-SP0",
+    "processador": "13th Gen Intel(R) Core(TM) i7-13650HX",
+    "nucleos_logicos": 20,
+    "ram_total_gb": 15.73,
+    "ram_livre_gb": 1.12,
+    "carga_memoria_pct": 92,
+    "python": "3.14.0",
+    "versoes": {
+      "numpy": "2.5.4",
+      "pandas": "3.1.0",
+      "scikit-learn": "1.9.1",
+      "scipy": "1.18.1",
+      "joblib": "1.6.0",
+      "xgboost": "3.4.1"
+    },
+    "threads": 4,
+    "variaveis_threads": {
+      "OMP_NUM_THREADS": "4",
+      "OPENBLAS_NUM_THREADS": "4",
+      "MKL_NUM_THREADS": "4"
+    },
+    "nodewatch": {
+      "commit": "893ceeae79a5f86294e6c69c40b34a041217c781",
+      "branch": "ml/arquitetura-unificada",
+      "alteracoes_nao_commitadas_rastreadas": []
+    }
+  },
+  "rede": {
+    "definicoes": {
+      "R0_majoritaria": "sempre OK (classe mais frequente no treino)",
+      "R1_persistencia": "previsão(t+1) = classe_atual(t); disponível no instante da decisão",
+      "R2_regra_limiares": "FALHA se rtt_ausente=1 ou razao_rtt_p99>1 ou perda_pct>=50; RISCO se razao_rtt_p95>1 ou razao_jitter_p95>1 ou perda_pct>0; senão OK (medição atual)",
+      "R3_pior_estado_k": "pior classe_atual entre as últimas k medições do fluxo; k=1 escolhido por macro-F1 no treino entre [1, 2, 3, 4, 6, 12]",
+      "alerta_das_regras": "previsão diferente de OK",
+      "horizonte": "próxima medição do fluxo (mediana de 240 s)"
+    },
+    "ajuste_k_treino_macro_f1": {
+      "1": 0.703200211398657,
+      "2": 0.6719785214744863,
+      "3": 0.6394273337297774,
+      "4": 0.6143848608979977,
+      "6": 0.5685720456097024,
+      "12": 0.4765584329821137
+    },
+    "validacao": {
+      "R0_majoritaria": {
+        "macro_f1": 0.3124166571417686,
+        "balanced_accuracy": 0.3333333333333333,
+        "acuracia": 0.8819100881910088,
+        "por_classe": {
+          "OK": {
+            "precisao": 0.8819100881910088,
+            "recall": 1.0,
+            "f1": 0.9372499714253058,
+            "suporte": 41000
+          },
+          "RISCO": {
+            "precisao": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "suporte": 4084
+          },
+          "FALHA": {
+            "precisao": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "suporte": 1406
+          }
+        },
+        "matriz_confusao": [
+          [
+            41000,
+            0,
+            0
+          ],
+          [
+            4084,
+            0,
+            0
+          ],
+          [
+            1406,
+            0,
+            0
+          ]
+        ],
+        "alerta_nao_ok": {
+          "alertas": 0,
+          "precisao": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "falsos_por_fluxo_hora": 0.0
+        },
+        "inicios_evento_detectados": 0.0,
+        "transicoes_acuracia": 0.4737609329446064,
+        "modelo_no_mesmo_numero_de_alertas": {
+          "alertas": 0,
+          "precisao": null,
+          "recall": 0.0
+        }
+      },
+      "R1_persistencia": {
+        "macro_f1": 0.7105887942733683,
+        "balanced_accuracy": 0.7108916437632464,
+        "acuracia": 0.896708969670897,
+        "por_classe": {
+          "OK": {
+            "precisao": 0.9445813108276215,
+            "recall": 0.9445121951219512,
+            "f1": 0.9445467517104285,
+            "suporte": 41000
+          },
+          "RISCO": {
+            "precisao": 0.48273328434974283,
+            "recall": 0.482615083251714,
+            "f1": 0.48267417656422185,
+            "suporte": 4084
+          },
+          "FALHA": {
+            "precisao": 0.7035460992907802,
+            "recall": 0.705547652916074,
+            "f1": 0.7045454545454546,
+            "suporte": 1406
+          }
+        },
+        "matriz_confusao": [
+          [
+            38725,
+            1992,
+            283
+          ],
+          [
+            1978,
+            1971,
+            135
+          ],
+          [
+            294,
+            120,
+            992
+          ]
+        ],
+        "alerta_nao_ok": {
+          "alertas": 5493,
+          "precisao": 0.5858365192062626,
+          "recall": 0.5861566484517304,
+          "f1": 0.5859965401074388,
+          "falsos_por_fluxo_hora": 0.7340288234028823
+        },
+        "inicios_evento_detectados": 0.0,
+        "transicoes_acuracia": 0.0,
+        "modelo_no_mesmo_numero_de_alertas": {
+          "alertas": 5493,
+          "precisao": 0.6504642271982524,
+          "recall": 0.6508196721311476
+        }
+      },
+      "R2_regra_limiares": {
+        "macro_f1": 0.709870637424392,
+        "balanced_accuracy": 0.7119957716414059,
+        "acuracia": 0.89677349967735,
+        "por_classe": {
+          "OK": {
+            "precisao": 0.9445826625689058,
+            "recall": 0.9445365853658536,
+            "f1": 0.944559623405449,
+            "suporte": 41000
+          },
+          "RISCO": {
+            "precisao": 0.4853195164075993,
+            "recall": 0.4816356513222331,
+            "f1": 0.48347056654786774,
+            "suporte": 4084
+          },
+          "FALHA": {
+            "precisao": 0.6935371785962474,
+            "recall": 0.7098150782361309,
+            "f1": 0.7015817223198594,
+            "suporte": 1406
+          }
+        },
+        "matriz_confusao": [
+          [
+            38726,
+            1972,
+            302
+          ],
+          [
+            1978,
+            1967,
+            139
+          ],
+          [
+            294,
+            114,
+            998
+          ]
+        ],
+        "alerta_nao_ok": {
+          "alertas": 5492,
+          "precisao": 0.5859431900946832,
+          "recall": 0.5861566484517304,
+          "f1": 0.5860498998360955,
+          "falsos_por_fluxo_hora": 0.7337061733706173
+        },
+        "inicios_evento_detectados": 0.0,
+        "transicoes_acuracia": 0.0014577259475218659,
+        "modelo_no_mesmo_numero_de_alertas": {
+          "alertas": 5492,
+          "precisao": 0.6505826656955572,
+          "recall": 0.6508196721311476
+        }
+      },
+      "R3_pior_estado_k1": {
+        "macro_f1": 0.7105887942733683,
+        "balanced_accuracy": 0.7108916437632464,
+        "acuracia": 0.896708969670897,
+        "por_classe": {
+          "OK": {
+            "precisao": 0.9445813108276215,
+            "recall": 0.9445121951219512,
+            "f1": 0.9445467517104285,
+            "suporte": 41000
+          },
+          "RISCO": {
+            "precisao": 0.48273328434974283,
+            "recall": 0.482615083251714,
+            "f1": 0.48267417656422185,
+            "suporte": 4084
+          },
+          "FALHA": {
+            "precisao": 0.7035460992907802,
+            "recall": 0.705547652916074,
+            "f1": 0.7045454545454546,
+            "suporte": 1406
+          }
+        },
+        "matriz_confusao": [
+          [
+            38725,
+            1992,
+            283
+          ],
+          [
+            1978,
+            1971,
+            135
+          ],
+          [
+            294,
+            120,
+            992
+          ]
+        ],
+        "alerta_nao_ok": {
+          "alertas": 5493,
+          "precisao": 0.5858365192062626,
+          "recall": 0.5861566484517304,
+          "f1": 0.5859965401074388,
+          "falsos_por_fluxo_hora": 0.7340288234028823
+        },
+        "inicios_evento_detectados": 0.0,
+        "transicoes_acuracia": 0.0,
+        "modelo_no_mesmo_numero_de_alertas": {
+          "alertas": 5493,
+          "precisao": 0.6504642271982524,
+          "recall": 0.6508196721311476
+        }
+      },
+      "modelo_RF_salvo": {
+        "macro_f1": 0.7628197569116848,
+        "balanced_accuracy": 0.7089941122513559,
+        "acuracia": 0.9322650032265003,
+        "por_classe": {
+          "OK": {
+            "precisao": 0.9385655293330565,
+            "recall": 0.9922926829268293,
+            "f1": 0.9646816128611568,
+            "suporte": 41000
+          },
+          "RISCO": {
+            "precisao": 0.854353562005277,
+            "recall": 0.3964250734573947,
+            "f1": 0.5415621341361432,
+            "suporte": 4084
+          },
+          "FALHA": {
+            "precisao": 0.8317307692307693,
+            "recall": 0.7382645803698435,
+            "f1": 0.7822155237377544,
+            "suporte": 1406
+          }
+        },
+        "matriz_confusao": [
+          [
+            40684,
+            210,
+            106
+          ],
+          [
+            2361,
+            1619,
+            104
+          ],
+          [
+            302,
+            66,
+            1038
+          ]
+        ],
+        "alerta_nao_ok": {
+          "alertas": 4216,
+          "precisao": 0.7746679316888045,
+          "recall": 0.5948998178506375,
+          "f1": 0.6729857819905213,
+          "falsos_por_fluxo_hora": 0.306517530651753
+        },
+        "inicios_evento_detectados": 0.04875886524822695,
+        "transicoes_acuracia": 0.44189920866305704,
+        "modelo_no_mesmo_numero_de_alertas": null
+      }
+    },
+    "teste": {
+      "R0_majoritaria": {
+        "macro_f1": 0.3107328276687318,
+        "balanced_accuracy": 0.3333333333333333,
+        "acuracia": 0.8730072660232079,
+        "por_classe": {
+          "OK": {
+            "precisao": 0.8730072660232079,
+            "recall": 1.0,
+            "f1": 0.9321984830061953,
+            "suporte": 40250
+          },
+          "RISCO": {
+            "precisao": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "suporte": 4440
+          },
+          "FALHA": {
+            "precisao": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "suporte": 1415
+          }
+        },
+        "matriz_confusao": [
+          [
+            40250,
+            0,
+            0
+          ],
+          [
+            4440,
+            0,
+            0
+          ],
+          [
+            1415,
+            0,
+            0
+          ]
+        ],
+        "alerta_nao_ok": {
+          "alertas": 0,
+          "precisao": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "falsos_por_fluxo_hora": 0.0
+        },
+        "inicios_evento_detectados": 0.0,
+        "transicoes_acuracia": 0.45870055339208854,
+        "modelo_no_mesmo_numero_de_alertas": {
+          "alertas": 0,
+          "precisao": null,
+          "recall": 0.0
+        }
+      },
+      "R1_persistencia": {
+        "macro_f1": 0.7108027572032635,
+        "balanced_accuracy": 0.7106482895115557,
+        "acuracia": 0.894176336622926,
+        "por_classe": {
+          "OK": {
+            "precisao": 0.9445383162707485,
+            "recall": 0.9443975155279503,
+            "f1": 0.9444679106517256,
+            "suporte": 40250
+          },
+          "RISCO": {
+            "precisao": 0.5058426966292134,
+            "recall": 0.506981981981982,
+            "f1": 0.5064116985376828,
+            "suporte": 4440
+          },
+          "FALHA": {
+            "precisao": 0.6824946846208363,
+            "recall": 0.680565371024735,
+            "f1": 0.6815286624203821,
+            "suporte": 1415
+          }
+        },
+        "matriz_confusao": [
+          [
+            38012,
+            1999,
+            239
+          ],
+          [
+            1980,
+            2251,
+            209
+          ],
+          [
+            252,
+            200,
+            963
+          ]
+        ],
+        "alerta_nao_ok": {
+          "alertas": 5861,
+          "precisao": 0.6181538986521071,
+          "recall": 0.6187873612297182,
+          "f1": 0.6184704677364289,
+          "falsos_por_fluxo_hora": 0.7281205942956296
+        },
+        "inicios_evento_detectados": 0.0,
+        "transicoes_acuracia": 0.0,
+        "modelo_no_mesmo_numero_de_alertas": {
+          "alertas": 5861,
+          "precisao": 0.6742876642211226,
+          "recall": 0.6749786507258754
+        }
+      },
+      "R2_regra_limiares": {
+        "macro_f1": 0.7116090379328543,
+        "balanced_accuracy": 0.7123930554789366,
+        "acuracia": 0.8942630951089904,
+        "por_classe": {
+          "OK": {
+            "precisao": 0.9444679106517256,
+            "recall": 0.9443975155279503,
+            "f1": 0.9444327117780786,
+            "suporte": 40250
+          },
+          "RISCO": {
+            "precisao": 0.5068833220491988,
+            "recall": 0.5058558558558559,
+            "f1": 0.5063690677488446,
+            "suporte": 4440
+          },
+          "FALHA": {
+            "precisao": 0.6811492641906096,
+            "recall": 0.6869257950530036,
+            "f1": 0.6840253342716397,
+            "suporte": 1415
+          }
+        },
+        "matriz_confusao": [
+          [
+            38012,
+            1994,
+            244
+          ],
+          [
+            1983,
+            2246,
+            211
+          ],
+          [
+            252,
+            191,
+            972
+          ]
+        ],
+        "alerta_nao_ok": {
+          "alertas": 5858,
+          "precisao": 0.6179583475588938,
+          "recall": 0.6182749786507259,
+          "f1": 0.6181166225561342,
+          "falsos_por_fluxo_hora": 0.7281205942956296
+        },
+        "inicios_evento_detectados": 0.0,
+        "transicoes_acuracia": 0.0018446402951424472,
+        "modelo_no_mesmo_numero_de_alertas": {
+          "alertas": 5858,
+          "precisao": 0.6742915670877433,
+          "recall": 0.6746370623398804
+        }
+      },
+      "R3_pior_estado_k1": {
+        "macro_f1": 0.7108027572032635,
+        "balanced_accuracy": 0.7106482895115557,
+        "acuracia": 0.894176336622926,
+        "por_classe": {
+          "OK": {
+            "precisao": 0.9445383162707485,
+            "recall": 0.9443975155279503,
+            "f1": 0.9444679106517256,
+            "suporte": 40250
+          },
+          "RISCO": {
+            "precisao": 0.5058426966292134,
+            "recall": 0.506981981981982,
+            "f1": 0.5064116985376828,
+            "suporte": 4440
+          },
+          "FALHA": {
+            "precisao": 0.6824946846208363,
+            "recall": 0.680565371024735,
+            "f1": 0.6815286624203821,
+            "suporte": 1415
+          }
+        },
+        "matriz_confusao": [
+          [
+            38012,
+            1999,
+            239
+          ],
+          [
+            1980,
+            2251,
+            209
+          ],
+          [
+            252,
+            200,
+            963
+          ]
+        ],
+        "alerta_nao_ok": {
+          "alertas": 5861,
+          "precisao": 0.6181538986521071,
+          "recall": 0.6187873612297182,
+          "f1": 0.6184704677364289,
+          "falsos_por_fluxo_hora": 0.7281205942956296
+        },
+        "inicios_evento_detectados": 0.0,
+        "transicoes_acuracia": 0.0,
+        "modelo_no_mesmo_numero_de_alertas": {
+          "alertas": 5861,
+          "precisao": 0.6742876642211226,
+          "recall": 0.6749786507258754
+        }
+      },
+      "modelo_RF_salvo": {
+        "macro_f1": 0.7499003079505945,
+        "balanced_accuracy": 0.7022544239474643,
+        "acuracia": 0.9276000433792431,
+        "por_classe": {
+          "OK": {
+            "precisao": 0.9372505751443729,
+            "recall": 0.9919254658385093,
+            "f1": 0.9638132483584395,
+            "suporte": 40250
+          },
+          "RISCO": {
+            "precisao": 0.8386805241753276,
+            "recall": 0.418018018018018,
+            "f1": 0.5579437847587555,
+            "suporte": 4440
+          },
+          "FALHA": {
+            "precisao": 0.7619783616692427,
+            "recall": 0.6968197879858657,
+            "f1": 0.7279438907345884,
+            "suporte": 1415
+          }
+        },
+        "matriz_confusao": [
+          [
+            39925,
+            201,
+            124
+          ],
+          [
+            2400,
+            1856,
+            184
+          ],
+          [
+            273,
+            156,
+            986
+          ]
+        ],
+        "alerta_nao_ok": {
+          "alertas": 4621,
+          "precisao": 0.7950660030296473,
+          "recall": 0.6274978650725875,
+          "f1": 0.7014127529591446,
+          "falsos_por_fluxo_hora": 0.30810107363626504
+        },
+        "inicios_evento_detectados": 0.04486316733961418,
+        "transicoes_acuracia": 0.42426726788276287,
+        "modelo_no_mesmo_numero_de_alertas": null
+      }
+    }
+  },
+  "lavagem": {
+    "definicoes": {
+      "limiares": {
+        "n_env_origem_24h_p99": 19667.0,
+        "orig_distintas_destino_p99": 8.0,
+        "dest_distintos_origem_p99": 14230.0,
+        "soma_env_origem_usd_24h_p99": 9893877760.0,
+        "n_rec_destino_24h_p99": 10.0
+      },
+      "taxa_base_treino": 0.0007787200735259491,
+      "formatos_risco_5x": [
+        "ACH"
+      ],
+      "nota_quantis": "p99 calculados no treino subamostrado (todos os positivos + 20% dos negativos), como em src/ml/preparacao.py:registrar_quantis",
+      "nota_valores": "nenhuma regra soma valores de moedas diferentes sem o câmbio estimado no treino; não há limite monetário fixo"
+    },
+    "F1_limiar_taxa_formato_validacao": {
+      "limiar": 0.0057868333039957755,
+      "f1": 0.01509165211198345,
+      "precisao": 0.00761269352493371,
+      "recall": 0.859073359073359
+    },
+    "F2_f1_por_k_validacao": {
+      "1": 0.009827742125276474,
+      "2": 0.037305274665209075,
+      "3": 0.020811069238989822,
+      "4": 0.017955801104972375,
+      "5": 0.0,
+      "6": 0.0,
+      "7": 0.0,
+      "8": 0.0
+    },
+    "F2_k_escolhido": 2,
+    "F3_conjuncoes_validacao": {
+      "formato_risco & par_novo": {
+        "alertas": 20512,
+        "precisao": 0.03934282371294852,
+        "recall": 0.778957528957529,
+        "f1": 0.07490254315945795
+      },
+      "formato_risco & repasse<60min": {
+        "alertas": 13242,
+        "precisao": 0.0040779338468509285,
+        "recall": 0.052123552123552123,
+        "f1": 0.00756408460568707
+      },
+      "formato_risco & (fan>p99 | repasse<60min)": {
+        "alertas": 21111,
+        "precisao": 0.006300033158069253,
+        "recall": 0.12837837837837837,
+        "f1": 0.012010656070799656
+      },
+      "formato_risco & par_novo & (fan>p99 | repasse<60min)": {
+        "alertas": 7487,
+        "precisao": 0.0166956057165754,
+        "recall": 0.12065637065637065,
+        "f1": 0.02933239469670304
+      }
+    },
+    "F3_escolhida": "formato_risco & par_novo",
+    "frequencia_flags_positivos_validacao": {
+      "formato_risco_5x": 0.859073359073359,
+      "par_novo": 0.7895752895752896,
+      "envios_24h_acima_p99": 0.0,
+      "fan_in_acima_p99": 0.07818532818532818,
+      "fan_out_acima_p99": 0.0,
+      "valor_atipico_z3": 0.07239382239382239,
+      "repasse_menos_60min": 0.05308880308880309,
+      "moedas_diferentes": 0.0
+    },
+    "frequencia_flags_negativos_validacao": {
+      "formato_risco_5x": 0.1202918024900258,
+      "par_novo": 0.03863293270626488,
+      "envios_24h_acima_p99": 0.0,
+      "fan_in_acima_p99": 0.012726959796285698,
+      "fan_out_acima_p99": 0.0,
+      "valor_atipico_z3": 0.0031083849669461933,
+      "repasse_menos_60min": 0.05872131120345717,
+      "moedas_diferentes": 0.016014714542845532
+    },
+    "validacao": {
+      "positivos": 1036,
+      "n": 965524,
+      "prevalencia": 0.0010729924890525767,
+      "AP": {
+        "F0_prevalencia": 0.0010729924890525767,
+        "F1_taxa_formato": 0.006842265204234755,
+        "F2_contagem_motivos": 0.014455770707607476,
+        "modelo_RF_salvo": 0.49504968507307723
+      },
+      "decisoes": {
+        "F1_taxa_formato": {
+          "alertas": 116910,
+          "precisao": 0.00761269352493371,
+          "recall": 0.859073359073359,
+          "f1": 0.01509165211198345,
+          "falsos_por_10k": 1201.6273028945939,
+          "modelo_no_mesmo_numero_de_alertas": {
+            "alertas": 116910,
+            "precisao": 0.008579248994953383,
+            "recall": 0.9681467181467182
+          }
+        },
+        "F2_motivos>=2": {
+          "alertas": 42872,
+          "precisao": 0.019103377495801457,
+          "recall": 0.7905405405405406,
+          "f1": 0.037305274665209075,
+          "falsos_por_10k": 435.5458797502703,
+          "modelo_no_mesmo_numero_de_alertas": {
+            "alertas": 42872,
+            "precisao": 0.02143590222056354,
+            "recall": 0.887065637065637
+          }
+        },
+        "F3_formato_risco & par_novo": {
+          "alertas": 20512,
+          "precisao": 0.03934282371294852,
+          "recall": 0.778957528957529,
+          "f1": 0.07490254315945795,
+          "falsos_por_10k": 204.08607139750023,
+          "modelo_no_mesmo_numero_de_alertas": {
+            "alertas": 20512,
+            "precisao": 0.043340483619344776,
+            "recall": 0.8581081081081081
+          }
+        },
+        "modelo_RF_salvo_no_limiar": {
+          "alertas": 875,
+          "precisao": 0.552,
+          "recall": 0.46621621621621623,
+          "f1": 0.5054945054945056,
+          "falsos_por_10k": 4.059971580198939
+        }
+      }
+    },
+    "teste": {
+      "positivos": 956,
+      "n": 862792,
+      "prevalencia": 0.0011080306725143488,
+      "AP": {
+        "F0_prevalencia": 0.0011080306725143488,
+        "F1_taxa_formato": 0.006377567070904597,
+        "F2_contagem_motivos": 0.011217888300797956,
+        "modelo_RF_salvo": 0.4610030845245591
+      },
+      "decisoes": {
+        "F1_taxa_formato": {
+          "alertas": 119195,
+          "precisao": 0.006996937791014724,
+          "recall": 0.8723849372384938,
+          "f1": 0.01388253114830505,
+          "falsos_por_10k": 1371.8370128605736,
+          "modelo_no_mesmo_numero_de_alertas": {
+            "alertas": 119195,
+            "precisao": 0.007626158815386552,
+            "recall": 0.950836820083682
+          }
+        },
+        "F2_motivos>=2": {
+          "alertas": 57871,
+          "precisao": 0.013547372604586062,
+          "recall": 0.8200836820083682,
+          "f1": 0.026654427388784062,
+          "falsos_por_10k": 661.6542573412827,
+          "modelo_no_mesmo_numero_de_alertas": {
+            "alertas": 57871,
+            "precisao": 0.01451504207634221,
+            "recall": 0.8786610878661087
+          }
+        },
+        "F3_formato_risco & par_novo": {
+          "alertas": 20575,
+          "precisao": 0.03625759416767922,
+          "recall": 0.7803347280334728,
+          "f1": 0.0692954344898054,
+          "falsos_por_10k": 229.8236423147178,
+          "modelo_no_mesmo_numero_de_alertas": {
+            "alertas": 20575,
+            "precisao": 0.038347509113001214,
+            "recall": 0.8253138075313807
+          }
+        },
+        "modelo_RF_salvo_no_limiar": {
+          "alertas": 817,
+          "precisao": 0.5214198286413708,
+          "recall": 0.4456066945606695,
+          "f1": 0.4805414551607445,
+          "falsos_por_10k": 4.531799089467682
+        }
+      }
+    }
+  }
+}
