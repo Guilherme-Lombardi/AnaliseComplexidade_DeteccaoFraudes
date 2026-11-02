@@ -1,0 +1,92 @@
+{
+  "gerado_em_utc": "2026-11-02T06:53:12+00:00",
+  "script": "c_preparar_financeiro.py",
+  "ambiente": {
+    "sistema": "Windows-11-10.0.26200-SP0",
+    "processador": "13th Gen Intel(R) Core(TM) i7-13650HX",
+    "nucleos_logicos": 20,
+    "ram_total_gb": 15.73,
+    "ram_livre_gb": 2.16,
+    "carga_memoria_pct": 86,
+    "python": "3.14.0",
+    "versoes": {
+      "numpy": "2.5.4",
+      "pandas": "3.1.0",
+      "scikit-learn": "1.9.1",
+      "scipy": "1.18.1",
+      "joblib": "1.6.0",
+      "xgboost": "3.4.1"
+    },
+    "threads": 4,
+    "variaveis_threads": {
+      "OMP_NUM_THREADS": "4",
+      "OPENBLAS_NUM_THREADS": "4",
+      "MKL_NUM_THREADS": "4"
+    },
+    "nodewatch": {
+      "commit": "893ceeae79a5f86294e6c69c40b34a041217c781",
+      "branch": "ml/arquitetura-unificada",
+      "alteracoes_nao_commitadas_rastreadas": []
+    }
+  },
+  "fonte": {
+    "arquivo": "HI-Small_Trans.zip",
+    "sha256": "93c9d65156a28596c756bd1395531e231c5950bbbdbfe665500bc866ed595179",
+    "linhas": 5078345
+  },
+  "protocolo": {
+    "inicio": "2022-09-01",
+    "treino_ate": "2022-09-07",
+    "validacao_ate": "2022-09-09",
+    "teste_ate": "2022-09-11",
+    "inicio_cauda": "2022-09-11",
+    "fracao_negativos_treino": 0.2,
+    "semente": 42
+  },
+  "atributos": 49,
+  "tipo_numerico": "float32",
+  "blocos": {
+    "treino": {
+      "linhas": 651808,
+      "positivos": 2530,
+      "bytes_parquet": 27962124
+    },
+    "validacao": {
+      "linhas": 965524,
+      "positivos": 1036,
+      "bytes_parquet": 40170856
+    },
+    "teste": {
+      "linhas": 862792,
+      "positivos": 956,
+      "bytes_parquet": 36393056
+    }
+  },
+  "tempos_memoria": {
+    "leitura_csv_zip": {
+      "segundos": 6.050050299963914,
+      "cpu_segundos": 8.734375,
+      "privada_antes_mb": 324.60546875,
+      "privada_pico_mb": 2377.2578125,
+      "acrescimo_pico_mb": 2052.65234375,
+      "privada_depois_mb": 1531.3671875
+    },
+    "ajuste_preparador_treino": {
+      "segundos": 2.0728611000813544,
+      "cpu_segundos": 2.0625,
+      "privada_antes_mb": 1610.01171875,
+      "privada_pico_mb": 1790.1640625,
+      "acrescimo_pico_mb": 180.15234375,
+      "privada_depois_mb": 931.37109375
+    },
+    "atributos_point_in_time": {
+      "segundos": 12.454325300059281,
+      "cpu_segundos": 12.375,
+      "privada_antes_mb": 966.8359375,
+      "privada_pico_mb": 3050.72265625,
+      "acrescimo_pico_mb": 2083.88671875,
+      "privada_depois_mb": 1454.69921875
+    }
+  },
+  "nota": "A leitura e os atributos são comuns a todos os algoritmos; o custo de treino de cada algoritmo é medido à parte em e_benchmark.py."
+}
