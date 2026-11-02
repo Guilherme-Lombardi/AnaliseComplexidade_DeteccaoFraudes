@@ -1,0 +1,120 @@
+{
+  "gerado_em_utc": "2026-11-02T07:36:05+00:00",
+  "script": "i_regressao_logistica.py",
+  "ambiente": {
+    "sistema": "Windows-11-10.0.26200-SP0",
+    "processador": "13th Gen Intel(R) Core(TM) i7-13650HX",
+    "nucleos_logicos": 20,
+    "ram_total_gb": 15.73,
+    "ram_livre_gb": 1.91,
+    "carga_memoria_pct": 87,
+    "python": "3.14.0",
+    "versoes": {
+      "numpy": "2.5.4",
+      "pandas": "3.1.0",
+      "scikit-learn": "1.9.1",
+      "scipy": "1.18.1",
+      "joblib": "1.6.0",
+      "xgboost": "3.4.1"
+    },
+    "threads": 4,
+    "variaveis_threads": {
+      "OMP_NUM_THREADS": "4",
+      "OPENBLAS_NUM_THREADS": "4",
+      "MKL_NUM_THREADS": "4"
+    },
+    "nodewatch": {
+      "commit": "893ceeae79a5f86294e6c69c40b34a041217c781",
+      "branch": "ml/arquitetura-unificada",
+      "alteracoes_nao_commitadas_rastreadas": []
+    }
+  },
+  "rede": {
+    "params": {
+      "C": 0.1,
+      "class_weight": null
+    },
+    "por_tolerancia": [
+      {
+        "tol": 0.0001,
+        "n_iter": [
+          47
+        ],
+        "segundos": 3.3510196999413893,
+        "objetivo": 0.3066251772456967,
+        "perda_media": 0.3066039620494496,
+        "norma_inf_gradiente": 5.3909722173818144e-05,
+        "metrica_validacao": 0.5900438378300802,
+        "maior_coeficiente_abs": 0.42953865107473016
+      },
+      {
+        "tol": 1e-06,
+        "n_iter": [
+          96
+        ],
+        "segundos": 5.017280400032178,
+        "objetivo": 0.30662395851422514,
+        "perda_media": 0.30660262509966396,
+        "norma_inf_gradiente": 8.822201669498711e-07,
+        "metrica_validacao": 0.5898670359969542,
+        "maior_coeficiente_abs": 0.4336894979337002
+      },
+      {
+        "tol": 1e-08,
+        "n_iter": [
+          145
+        ],
+        "segundos": 6.872433699900284,
+        "objetivo": 0.30662395831289646,
+        "perda_media": 0.30660262628186874,
+        "norma_inf_gradiente": 1.737511460025241e-08,
+        "metrica_validacao": 0.5898670359969542,
+        "maior_coeficiente_abs": 0.4336966737701174
+      }
+    ]
+  },
+  "lavagem": {
+    "params": {
+      "C": 0.1
+    },
+    "por_tolerancia": [
+      {
+        "tol": 0.0001,
+        "n_iter": [
+          17
+        ],
+        "segundos": 4.711203399929218,
+        "objetivo": 0.004084062082381225,
+        "perda_media": 0.00407571552559768,
+        "norma_inf_gradiente": 6.483340243330381e-05,
+        "metrica_validacao": 0.16902067000492632,
+        "maior_coeficiente_abs": 1.159522533416748
+      },
+      {
+        "tol": 1e-06,
+        "n_iter": [
+          87
+        ],
+        "segundos": 7.829985999967903,
+        "objetivo": 0.004005323019159908,
+        "perda_media": 0.003981580916454462,
+        "norma_inf_gradiente": 6.161296423275511e-07,
+        "metrica_validacao": 0.18989184759155933,
+        "maior_coeficiente_abs": 1.8800994157791138
+      },
+      {
+        "tol": 1e-08,
+        "n_iter": [
+          112
+        ],
+        "segundos": 9.1293095999863,
+        "objetivo": 0.004005294763237016,
+        "perda_media": 0.003981558940729912,
+        "norma_inf_gradiente": 2.1878900502813076e-07,
+        "metrica_validacao": 0.1899750270847759,
+        "maior_coeficiente_abs": 1.8855875730514526
+      }
+    ]
+  },
+  "nota": "max_iter=20000 para isolar o efeito da tolerância; a produção usa max_iter=3000 e tol=1e-4 (padrão do scikit-learn). Objetivo e gradiente recalculados à mão a partir dos coeficientes."
+}
