@@ -1,0 +1,598 @@
+{
+  "gerado_em_utc": "2026-11-02T06:45:30+00:00",
+  "script": "a_inventario.py",
+  "ambiente": {
+    "sistema": "Windows-11-10.0.26200-SP0",
+    "processador": "13th Gen Intel(R) Core(TM) i7-13650HX",
+    "nucleos_logicos": 20,
+    "ram_total_gb": 15.73,
+    "ram_livre_gb": 0.51,
+    "carga_memoria_pct": 96,
+    "python": "3.14.0",
+    "versoes": {
+      "numpy": "2.5.4",
+      "pandas": "3.1.0",
+      "scikit-learn": "1.9.1",
+      "scipy": "1.18.1",
+      "joblib": "1.6.0",
+      "xgboost": "3.4.1"
+    },
+    "threads": 4,
+    "variaveis_threads": {
+      "OMP_NUM_THREADS": "4",
+      "OPENBLAS_NUM_THREADS": "4",
+      "MKL_NUM_THREADS": "4"
+    },
+    "nodewatch": {
+      "commit": "893ceeae79a5f86294e6c69c40b34a041217c781",
+      "branch": "ml/arquitetura-unificada",
+      "alteracoes_nao_commitadas_rastreadas": []
+    }
+  },
+  "dados": {
+    "rede": {
+      "arquivo": "dataset_final.csv",
+      "bytes": 52982930,
+      "sha256": "125453f154616b6d02587f9577aab14828002ebc31d8ae053771780058d9b997"
+    },
+    "transacoes": {
+      "arquivo": "HI-Small_Trans.zip",
+      "bytes": 89639430,
+      "sha256": "93c9d65156a28596c756bd1395531e231c5950bbbdbfe665500bc866ed595179"
+    }
+  },
+  "artefato": {
+    "arquivo": "modelo_unificado.joblib",
+    "bytes": 38614042,
+    "sha256": "d7ed398f3896eb652eafc29ce9825268c662a3f017fc08fd903e362940c3078a",
+    "versoes_no_artefato": {
+      "modulo_ml": "0.1.0",
+      "python": "3.14.0",
+      "numpy": "2.5.4",
+      "pandas": "3.1.0",
+      "scikit-learn": "1.9.1",
+      "joblib": "1.6.0"
+    },
+    "salvo_em": "2026-10-26T12:36:06+00:00",
+    "tarefas": {
+      "fusao_rede_transacao": "indisponivel",
+      "estado_rede": "treinada",
+      "estado_rede__com_classe_atual": "treinada",
+      "lavagem": "treinada"
+    }
+  },
+  "metadados_docs_igual_artefato_sem_caminhos": true,
+  "cabecas": [
+    {
+      "tarefa": "fusao_rede_transacao",
+      "status": "indisponivel",
+      "motivo": "Não há vínculo verificável entre as transações do HI-Small (setembro de 2022) e os fluxos de dataset_final.csv (setembro-outubro de 2026): não há chave comum nem sobreposição temporal.",
+      "requisitos": [
+        "transações no esquema transacao_v1 com timestamp_disponivel",
+        "tabela vinculo_v1 (transação ou chave técnica → id_fluxo, com validade e fonte documentada)",
+        "telemetria rede_v1 do mesmo período das transações",
+        "previsões de rede fora da amostra (modelo de rede treinado antes de cada transação)",
+        "rotulo_fraude com origem_rotulo e timestamp_confirmacao"
+      ]
+    },
+    {
+      "tarefa": "estado_rede",
+      "algoritmo_efetivo": "sklearn.ensemble._forest.RandomForestClassifier",
+      "familia_declarada": "random_forest",
+      "params_declarados": {
+        "n_estimators": 150,
+        "min_samples_leaf": 20,
+        "max_samples": 0.5,
+        "class_weight": null
+      },
+      "params_efetivos": {
+        "bootstrap": true,
+        "class_weight": null,
+        "criterion": "gini",
+        "max_depth": null,
+        "max_features": "sqrt",
+        "max_leaf_nodes": null,
+        "max_samples": 0.5,
+        "min_samples_leaf": 20,
+        "n_estimators": 150,
+        "n_jobs": 4,
+        "random_state": 42
+      },
+      "etapas_pipeline": [
+        [
+          "sentinelas",
+          "src.ml.preparacao.SentinelaParaNaN"
+        ],
+        [
+          "constantes",
+          "sklearn.feature_selection._variance_threshold.VarianceThreshold"
+        ],
+        [
+          "modelo",
+          "sklearn.ensemble._forest.RandomForestClassifier"
+        ]
+      ],
+      "colunas_entrada": 21,
+      "atributos_no_estimador": 23,
+      "classes": [
+        "OK",
+        "RISCO",
+        "FALHA"
+      ],
+      "classes_estimador": [
+        "FALHA",
+        "OK",
+        "RISCO"
+      ],
+      "limiar_alerta": 0.3173479675565243,
+      "usa_classe_atual": false,
+      "versao": "estado_rede-20261026T123227Z",
+      "complexidade": {
+        "arvores": 150,
+        "nos_total": 649870,
+        "nos_medio": 4332.466666666666,
+        "profundidade_media": 44.78,
+        "profundidade_max": 61,
+        "folhas_total": 325010
+      }
+    },
+    {
+      "tarefa": "estado_rede__com_classe_atual",
+      "algoritmo_efetivo": "sklearn.ensemble._forest.RandomForestClassifier",
+      "familia_declarada": "random_forest",
+      "params_declarados": {
+        "n_estimators": 150,
+        "min_samples_leaf": 20,
+        "max_samples": 0.5,
+        "class_weight": null
+      },
+      "params_efetivos": {
+        "bootstrap": true,
+        "class_weight": null,
+        "criterion": "gini",
+        "max_depth": null,
+        "max_features": "sqrt",
+        "max_leaf_nodes": null,
+        "max_samples": 0.5,
+        "min_samples_leaf": 20,
+        "n_estimators": 150,
+        "n_jobs": 4,
+        "random_state": 42
+      },
+      "etapas_pipeline": [
+        [
+          "sentinelas",
+          "src.ml.preparacao.SentinelaParaNaN"
+        ],
+        [
+          "constantes",
+          "sklearn.feature_selection._variance_threshold.VarianceThreshold"
+        ],
+        [
+          "modelo",
+          "sklearn.ensemble._forest.RandomForestClassifier"
+        ]
+      ],
+      "colunas_entrada": 23,
+      "atributos_no_estimador": 25,
+      "classes": [
+        "OK",
+        "RISCO",
+        "FALHA"
+      ],
+      "classes_estimador": [
+        "FALHA",
+        "OK",
+        "RISCO"
+      ],
+      "limiar_alerta": 0.30616805223458865,
+      "usa_classe_atual": true,
+      "versao": "estado_rede__com_classe_atual-20261026T123243Z",
+      "complexidade": {
+        "arvores": 150,
+        "nos_total": 671124,
+        "nos_medio": 4474.16,
+        "profundidade_media": 44.28666666666667,
+        "profundidade_max": 62,
+        "folhas_total": 335637
+      }
+    },
+    {
+      "tarefa": "lavagem",
+      "algoritmo_efetivo": "sklearn.ensemble._forest.RandomForestClassifier",
+      "familia_declarada": "random_forest",
+      "params_declarados": {
+        "n_estimators": 100,
+        "min_samples_leaf": 50,
+        "max_samples": 0.5
+      },
+      "params_efetivos": {
+        "bootstrap": true,
+        "class_weight": null,
+        "criterion": "gini",
+        "max_depth": null,
+        "max_features": "sqrt",
+        "max_leaf_nodes": null,
+        "max_samples": 0.5,
+        "min_samples_leaf": 50,
+        "n_estimators": 100,
+        "n_jobs": 4,
+        "random_state": 42
+      },
+      "etapas_pipeline": [
+        [
+          "constantes",
+          "sklearn.feature_selection._variance_threshold.VarianceThreshold"
+        ],
+        [
+          "modelo",
+          "sklearn.ensemble._forest.RandomForestClassifier"
+        ]
+      ],
+      "colunas_entrada": 49,
+      "atributos_no_estimador": 48,
+      "classes": [
+        "0",
+        "1"
+      ],
+      "classes_estimador": [
+        "0",
+        "1"
+      ],
+      "limiar_alerta": 0.08078996718382447,
+      "usa_classe_atual": false,
+      "versao": "lavagem-20261026T123606Z",
+      "complexidade": {
+        "arvores": 100,
+        "nos_total": 97294,
+        "nos_medio": 972.94,
+        "profundidade_media": 25.48,
+        "profundidade_max": 37,
+        "folhas_total": 48697
+      }
+    }
+  ],
+  "codigo": {
+    "importacoes_ml": [
+      {
+        "arquivo": "src/ml/auditoria.py",
+        "linha": 235,
+        "modulo": "sklearn.metrics",
+        "nome": "average_precision_score"
+      },
+      {
+        "arquivo": "src/ml/avaliacao.py",
+        "linha": 22,
+        "modulo": "sklearn.metrics",
+        "nome": "accuracy_score"
+      },
+      {
+        "arquivo": "src/ml/avaliacao.py",
+        "linha": 22,
+        "modulo": "sklearn.metrics",
+        "nome": "average_precision_score"
+      },
+      {
+        "arquivo": "src/ml/avaliacao.py",
+        "linha": 22,
+        "modulo": "sklearn.metrics",
+        "nome": "balanced_accuracy_score"
+      },
+      {
+        "arquivo": "src/ml/avaliacao.py",
+        "linha": 22,
+        "modulo": "sklearn.metrics",
+        "nome": "confusion_matrix"
+      },
+      {
+        "arquivo": "src/ml/avaliacao.py",
+        "linha": 22,
+        "modulo": "sklearn.metrics",
+        "nome": "f1_score"
+      },
+      {
+        "arquivo": "src/ml/avaliacao.py",
+        "linha": 22,
+        "modulo": "sklearn.metrics",
+        "nome": "precision_recall_curve"
+      },
+      {
+        "arquivo": "src/ml/avaliacao.py",
+        "linha": 22,
+        "modulo": "sklearn.metrics",
+        "nome": "precision_recall_fscore_support"
+      },
+      {
+        "arquivo": "src/ml/experimentos.py",
+        "linha": 24,
+        "modulo": "sklearn.metrics",
+        "nome": "average_precision_score"
+      },
+      {
+        "arquivo": "src/ml/experimentos.py",
+        "linha": 25,
+        "modulo": "sklearn.model_selection",
+        "nome": "GroupKFold"
+      },
+      {
+        "arquivo": "src/ml/modelos.py",
+        "linha": 30,
+        "modulo": "sklearn",
+        "nome": null
+      },
+      {
+        "arquivo": "src/ml/modelos.py",
+        "linha": 31,
+        "modulo": "sklearn.dummy",
+        "nome": "DummyClassifier"
+      },
+      {
+        "arquivo": "src/ml/modelos.py",
+        "linha": 32,
+        "modulo": "sklearn.ensemble",
+        "nome": "HistGradientBoostingClassifier"
+      },
+      {
+        "arquivo": "src/ml/modelos.py",
+        "linha": 32,
+        "modulo": "sklearn.ensemble",
+        "nome": "RandomForestClassifier"
+      },
+      {
+        "arquivo": "src/ml/modelos.py",
+        "linha": 33,
+        "modulo": "sklearn.linear_model",
+        "nome": "LogisticRegression"
+      },
+      {
+        "arquivo": "src/ml/preparacao.py",
+        "linha": 24,
+        "modulo": "sklearn.base",
+        "nome": "BaseEstimator"
+      },
+      {
+        "arquivo": "src/ml/preparacao.py",
+        "linha": 24,
+        "modulo": "sklearn.base",
+        "nome": "TransformerMixin"
+      },
+      {
+        "arquivo": "src/ml/preparacao.py",
+        "linha": 25,
+        "modulo": "sklearn.feature_selection",
+        "nome": "VarianceThreshold"
+      },
+      {
+        "arquivo": "src/ml/preparacao.py",
+        "linha": 26,
+        "modulo": "sklearn.impute",
+        "nome": "SimpleImputer"
+      },
+      {
+        "arquivo": "src/ml/preparacao.py",
+        "linha": 27,
+        "modulo": "sklearn.pipeline",
+        "nome": "Pipeline"
+      },
+      {
+        "arquivo": "src/ml/preparacao.py",
+        "linha": 28,
+        "modulo": "sklearn.preprocessing",
+        "nome": "FunctionTransformer"
+      },
+      {
+        "arquivo": "src/ml/preparacao.py",
+        "linha": 28,
+        "modulo": "sklearn.preprocessing",
+        "nome": "StandardScaler"
+      }
+    ],
+    "estimadores_importados": [
+      "DummyClassifier",
+      "HistGradientBoostingClassifier",
+      "LogisticRegression",
+      "RandomForestClassifier"
+    ],
+    "regressores_para_alvo_continuo": [],
+    "numpy_funcoes_por_arquivo": {
+      "src/ml/auditoria.py": {
+        "ndarray": 5,
+        "isclose": 5,
+        "where": 2,
+        "int64": 2,
+        "minimum": 2,
+        "nan": 2,
+        "full": 1,
+        "zeros": 1,
+        "isnan": 1,
+        "isinf": 1,
+        "isin": 1,
+        "intersect1d": 1,
+        "arange": 1,
+        "flatnonzero": 1
+      },
+      "src/ml/avaliacao.py": {
+        "asarray": 16,
+        "ndarray": 15,
+        "clip": 4,
+        "linspace": 3,
+        "mean": 2,
+        "unique": 2,
+        "isfinite": 2,
+        "searchsorted": 2,
+        "bincount": 2,
+        "sum": 2,
+        "lexsort": 1,
+        "stack": 1,
+        "digitize": 1,
+        "errstate": 1,
+        "where": 1,
+        "round": 1,
+        "array": 1,
+        "nanargmax": 1,
+        "arange": 1,
+        "argsort": 1,
+        "quantile": 1,
+        "log": 1
+      },
+      "src/ml/esquemas.py": {
+        "nan": 1,
+        "isfinite": 1,
+        "all": 1,
+        "isin": 1,
+        "isnan": 1,
+        "isinf": 1,
+        "equal": 1,
+        "asarray": 1,
+        "mod": 1
+      },
+      "src/ml/experimentos.py": {
+        "argmax": 6,
+        "asarray": 4,
+        "ndarray": 3,
+        "full": 3,
+        "array": 2,
+        "vstack": 1,
+        "concatenate": 1,
+        "cumsum": 1,
+        "int64": 1,
+        "unique": 1,
+        "flatnonzero": 1,
+        "isin": 1,
+        "zeros": 1
+      },
+      "src/ml/ingestao.py": {
+        "int64": 10,
+        "int32": 4,
+        "arange": 2,
+        "round": 2,
+        "ndarray": 1,
+        "asarray": 1,
+        "int8": 1,
+        "isfinite": 1
+      },
+      "src/ml/integracao.py": {
+        "nan": 5,
+        "select": 1,
+        "arange": 1
+      },
+      "src/ml/modelos.py": {
+        "ndarray": 2,
+        "__version__": 1,
+        "asarray": 1,
+        "stack": 1,
+        "zeros": 1,
+        "vstack": 1,
+        "empty": 1
+      },
+      "src/ml/preparacao.py": {
+        "ndarray": 19,
+        "float32": 17,
+        "int64": 10,
+        "asarray": 5,
+        "where": 5,
+        "float64": 4,
+        "nan": 3,
+        "flatnonzero": 3,
+        "searchsorted": 3,
+        "full": 2,
+        "log1p": 2,
+        "sort": 2,
+        "maximum": 2,
+        "concatenate": 2,
+        "abs": 2,
+        "isnan": 2,
+        "isfinite": 1,
+        "sign": 1,
+        "lexsort": 1,
+        "errstate": 1,
+        "random": 1,
+        "sqrt": 1,
+        "minimum": 1,
+        "cumsum": 1,
+        "nanquantile": 1
+      },
+      "src/ml/previsao.py": {
+        "asarray": 3,
+        "concatenate": 3,
+        "arange": 2,
+        "ndarray": 2,
+        "int32": 2,
+        "empty": 2,
+        "argmax": 1
+      }
+    }
+  },
+  "reproducao_rede": {
+    "sha256_dados_treino": [
+      "125453f154616b6d02587f9577aab14828002ebc31d8ae053771780058d9b997"
+    ],
+    "sha256_dados_agora": [
+      "125453f154616b6d02587f9577aab14828002ebc31d8ae053771780058d9b997"
+    ],
+    "mesmos_dados": true,
+    "validacao": {
+      "macro_f1_recalculado": 0.7628197569116848,
+      "macro_f1_documentado": 0.7628197569116848,
+      "matriz_igual": true,
+      "proba_soma_1_max_desvio": 1.1102230246251565e-15,
+      "proba_fora_0_1": 0
+    },
+    "teste": {
+      "macro_f1_recalculado": 0.7499003079505945,
+      "macro_f1_documentado": 0.7499003079505945,
+      "matriz_igual": true,
+      "proba_soma_1_max_desvio": 1.1102230246251565e-15,
+      "proba_fora_0_1": 0
+    }
+  },
+  "reproducao_lavagem": {
+    "sha256_transacoes_treino": "93c9d65156a28596c756bd1395531e231c5950bbbdbfe665500bc866ed595179",
+    "sha256_cache_atributos": "93c9d65156a28596c756bd1395531e231c5950bbbdbfe665500bc866ed595179",
+    "sha256_transacoes_agora": "93c9d65156a28596c756bd1395531e231c5950bbbdbfe665500bc866ed595179",
+    "teste": {
+      "average_precision": {
+        "recalculado": 0.4610030807373123,
+        "documentado": 0.4610030807373121
+      },
+      "precisao": {
+        "recalculado": 0.5214198286413708,
+        "documentado": 0.5214198286413708
+      },
+      "recall": {
+        "recalculado": 0.4456066945606695,
+        "documentado": 0.4456066945606695
+      },
+      "f1": {
+        "recalculado": 0.4805414551607445,
+        "documentado": 0.4805414551607445
+      },
+      "falsos_positivos": {
+        "recalculado": 391,
+        "documentado": 391
+      },
+      "verdadeiros_positivos": {
+        "recalculado": 426,
+        "documentado": 426
+      }
+    }
+  },
+  "linha_do_tempo": {
+    "log_treino_rede.txt": {
+      "primeira": "09:31:09",
+      "ultima": "09:32:44",
+      "linhas": 15
+    },
+    "log_treino_lavagem.txt": {
+      "primeira": "09:34:36",
+      "ultima": "09:36:07",
+      "linhas": 10
+    },
+    "log_avaliacao.txt": {
+      "primeira": "09:36:48",
+      "ultima": "09:38:53",
+      "linhas": 13
+    },
+    "artefato_salvo_em_utc": "2026-10-26T12:36:06+00:00"
+  }
+}
