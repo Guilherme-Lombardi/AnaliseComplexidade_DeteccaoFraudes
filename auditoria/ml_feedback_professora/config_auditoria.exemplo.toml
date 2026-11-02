@@ -1,0 +1,20 @@
+# Copie para config_auditoria.local.toml e ajuste os caminhos desta máquina.
+# Os resultados gravados em resultados/ guardam só nomes de arquivo e SHA-256.
+
+[caminhos]
+# Clone do NodeWatch no commit auditado (branch ml/arquitetura-unificada).
+nodewatch = "C:/caminho/para/NodeWatch"
+rede = "C:/caminho/para/dataset_final.csv"
+transacoes = "C:/caminho/para/HI-Small_Trans.zip"   # .csv ou .zip
+contas = "C:/caminho/para/HI-Small_accounts.csv"
+padroes = "C:/caminho/para/HI-Small_Patterns.txt"
+# Saídas pesadas (atributos em parquet, modelos de benchmark). Fora do repositório.
+trabalho = "C:/caminho/temporario/auditoria_ml"
+# Pasta com o XGBoost instalado à parte (pip install --target), para não alterar
+# o .venv do NodeWatch. Deixe vazio se o XGBoost já estiver no ambiente.
+pacotes_extras = "C:/caminho/temporario/bench_pkgs"
+
+[execucao]
+# Mesmo paralelismo do treino documentado (n_jobs = 4 em src/ml/config.py).
+threads = 4
+semente = 42
