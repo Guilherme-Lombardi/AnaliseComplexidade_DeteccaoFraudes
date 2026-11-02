@@ -1,0 +1,211 @@
+{
+  "gerado_em_utc": "2026-11-02T06:50:47+00:00",
+  "script": "b_verificar_implementacao.py",
+  "ambiente": {
+    "sistema": "Windows-11-10.0.26200-SP0",
+    "processador": "13th Gen Intel(R) Core(TM) i7-13650HX",
+    "nucleos_logicos": 20,
+    "ram_total_gb": 15.73,
+    "ram_livre_gb": 1.88,
+    "carga_memoria_pct": 88,
+    "python": "3.14.0",
+    "versoes": {
+      "numpy": "2.5.4",
+      "pandas": "3.1.0",
+      "scikit-learn": "1.9.1",
+      "scipy": "1.18.1",
+      "joblib": "1.6.0",
+      "xgboost": "3.4.1"
+    },
+    "threads": 4,
+    "variaveis_threads": {
+      "OMP_NUM_THREADS": "4",
+      "OPENBLAS_NUM_THREADS": "4",
+      "MKL_NUM_THREADS": "4"
+    },
+    "nodewatch": {
+      "commit": "893ceeae79a5f86294e6c69c40b34a041217c781",
+      "branch": "ml/arquitetura-unificada",
+      "alteracoes_nao_commitadas_rastreadas": []
+    }
+  },
+  "rede": {
+    "regra_classe_atual": {
+      "concordancia_total": 0.9994400426406032,
+      "concordancia_por_split": {
+        "treino": 0.9994282376045641,
+        "validacao": 0.99935469993547,
+        "teste": 0.999587897191194
+      },
+      "linhas_divergentes": 187,
+      "matriz_regra_x_classe_atual": {
+        "FALHA": {
+          "FALHA": 12449,
+          "OK": 0,
+          "RISCO": 2
+        },
+        "OK": {
+          "FALHA": 0,
+          "OK": 292283,
+          "RISCO": 0
+        },
+        "RISCO": {
+          "FALHA": 169,
+          "OK": 16,
+          "RISCO": 29035
+        }
+      },
+      "alvo_igual_classe_atual_seguinte": 0.9998262531491616
+    },
+    "validacao": {
+      "matriz_igual": true,
+      "macro_f1": [
+        0.7628197569116848,
+        0.7628197569116848
+      ],
+      "balanced_accuracy": [
+        0.7089941122513559,
+        0.7089941122513558
+      ],
+      "inicios_evento": [
+        [
+          2256,
+          110
+        ],
+        [
+          2256,
+          110
+        ]
+      ],
+      "falsos_por_fluxo_hora": [
+        0.306517530651753,
+        0.306517530651753
+      ],
+      "limiar_max_f1": {
+        "funcao": [
+          0.3173479675565243,
+          0.6729857819905213
+        ],
+        "exaustivo": [
+          0.3173479675565243,
+          0.6729857819905213
+        ]
+      },
+      "ece": [
+        0.008105837680420844,
+        0.008105837680420844
+      ]
+    },
+    "teste": {
+      "matriz_igual": true,
+      "macro_f1": [
+        0.7499003079505945,
+        0.7499003079505945
+      ],
+      "balanced_accuracy": [
+        0.7022544239474643,
+        0.7022544239474643
+      ],
+      "inicios_evento": [
+        [
+          2229,
+          100
+        ],
+        [
+          2229,
+          100
+        ]
+      ],
+      "falsos_por_fluxo_hora": [
+        0.30810107363626504,
+        0.30810107363626504
+      ],
+      "ece": [
+        0.009715052031466886,
+        0.009715052031466886
+      ]
+    }
+  },
+  "financeiro": {
+    "tempos_memoria": {
+      "leitura_hismall": {
+        "segundos": 10.440382999950089,
+        "cpu_segundos": 13.9375,
+        "privada_antes_mb": 535.45703125,
+        "privada_pico_mb": 2540.7421875,
+        "acrescimo_pico_mb": 2005.28515625,
+        "privada_depois_mb": 1694.86328125
+      },
+      "ajuste_preparador": {
+        "segundos": 4.221265899948776,
+        "cpu_segundos": 4.09375,
+        "privada_antes_mb": 1735.11328125,
+        "privada_pico_mb": 1940.0859375,
+        "acrescimo_pico_mb": 204.97265625,
+        "privada_depois_mb": 980.54296875
+      },
+      "vetorizado_amostra": {
+        "segundos": 12.481894799973816,
+        "cpu_segundos": 12.171875,
+        "privada_antes_mb": 1096.734375,
+        "privada_pico_mb": 1846.671875,
+        "acrescimo_pico_mb": 749.9375,
+        "privada_depois_mb": 1180.40625
+      },
+      "forca_bruta_amostra": {
+        "segundos": 25.21619649999775,
+        "cpu_segundos": 24.828125,
+        "privada_antes_mb": 1180.40625,
+        "privada_pico_mb": 1232.765625,
+        "acrescimo_pico_mb": 52.359375,
+        "privada_depois_mb": 1050.296875
+      },
+      "vetorizado_teste_completo": {
+        "segundos": 16.544504099991173,
+        "cpu_segundos": 16.234375,
+        "privada_antes_mb": 1056.39453125,
+        "privada_pico_mb": 2245.9296875,
+        "acrescimo_pico_mb": 1189.53515625,
+        "privada_depois_mb": 1381.44140625
+      }
+    },
+    "preparador_reajustado_igual_ao_salvo": true,
+    "moedas_sem_taxa": [],
+    "amostra": {
+      "consultas": 2000,
+      "positivas": 500,
+      "por_split": {
+        "treino": 1245,
+        "validacao": 387,
+        "teste": 368
+      },
+      "transacoes_de_historico_consideradas": 588638,
+      "colunas_comparadas": 49,
+      "colunas_divergentes": {
+        "z_valor_origem": {
+          "divergentes": 4,
+          "max_abs": 10.207164370773398,
+          "max_rel": 1646375.4946016707
+        },
+        "razao_saida_entrada_24h": {
+          "divergentes": 8,
+          "max_abs": 61304.33557510376,
+          "max_rel": 0.006849897009382019
+        }
+      },
+      "max_rel_por_coluna": {
+        "log_valor_usd": 5.823276339099367e-08,
+        "soma_env_origem_usd_24h": 0.006849897009382019,
+        "z_valor_origem": 1646375.4946016707,
+        "soma_rec_origem_usd_24h": 0.018903395899240335,
+        "razao_saida_entrada_24h": 0.006849897009382019
+      }
+    },
+    "cache_teste": {
+      "linhas": 862792,
+      "mesma_ordem_de_transacoes": true,
+      "celulas": 42276808,
+      "celulas_identicas": 42276808
+    }
+  }
+}
