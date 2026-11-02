@@ -43,7 +43,9 @@ from src.ml.modelos import recriar_estimador
 from src.ml.preparacao import MINUTOS_DIA, matriz_rede, montar_pipeline_financeiro, montar_pipeline_rede
 
 CLASSES = np.asarray(CLASSES_REDE, dtype=object)
-FAMILIA_NODEWATCH = {"rf": "random_forest", "hgb": "hist_gradient_boosting", "lr": "logistica"}
+FAMILIA_NODEWATCH = {"rf": "random_forest", "rf_nb": "random_forest", "rf_red": "random_forest",
+                     "hgb": "hist_gradient_boosting",
+                     "lr": "logistica"}
 SEMENTES = (42, 43, 44)
 PREDICOES = comum.TRABALHO / "predicoes"
 
@@ -60,6 +62,12 @@ def grade(dominio: str, familia: str) -> List[Dict[str, Any]]:
                     for f in (31, 63) for cw in (None, "balanced")],
             "lr": [{"C": C, "class_weight": cw} for C in (0.1, 1.0) for cw in (None, "balanced")],
             "xgb": [{"max_depth": d, "pesos": p} for d in (6, 8) for p in (None, "balanced")],
+            # Configuração vencedora do notebook didático da professora (100 árvores, folha 5,
+            # bootstrap completo), aqui ajustada só no treino para manter o protocolo.
+            "rf_nb": [{"n_estimators": 100, "min_samples_leaf": 5, "max_samples": None, "class_weight": None}],
+            # RF de produção com 50 árvores: a curva de árvores na VALIDAÇÃO (rede/rf) fica estável
+            # de 25 a 150 árvores; testa se o tamanho e a latência caem sem perda de qualidade.
+            "rf_red": [{"n_estimators": 50, "min_samples_leaf": 20, "max_samples": 0.5, "class_weight": None}],
         }[familia]
     return {
         "rf": [{"n_estimators": 100, "min_samples_leaf": 50, "max_samples": 0.5}],
@@ -277,7 +285,7 @@ def curva_arvores(dominio: str, pipe: Any, d: Dict[str, Any]) -> List[Dict[str, 
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--dominio", choices=("rede", "lavagem"), required=True)
-    ap.add_argument("--familia", choices=("rf", "hgb", "lr", "xgb"), required=True)
+    ap.add_argument("--familia", choices=("rf", "rf_nb", "rf_red", "hgb", "lr", "xgb"), required=True)
     args = ap.parse_args()
     dom, fam = args.dominio, args.familia
     classes = classes_dominio(dom)
@@ -340,7 +348,7 @@ def main() -> None:
         "inferencia": inferencia,
         "tamanho": tamanho(pipe),
     }
-    if fam == "rf":
+    if fam.startswith("rf"):
         resultado["curva_arvores_validacao"] = curva_arvores(dom, pipe, d)
     if fam == "xgb":
         import xgboost
